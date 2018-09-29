@@ -7,6 +7,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.7.1",
     "gatsby": "^2.0.0",
     "gatsby-plugin-feed": "^2.0.5",
     "gatsby-plugin-google-analytics": "^2.0.5",
@@ -39,6 +40,8 @@
     "typography-theme-github": "^0.15.10"
   },
   "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^1.2.0",
