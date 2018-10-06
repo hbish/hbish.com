@@ -22,7 +22,8 @@ It was just past 10 o&#8217;clock and I looked at the clock on the top right of 
 
 Can&#8217;t believe something so simple took me this long to think up. Thank you **palindrome**!
 
-<pre><code class="java">import java.io.BufferedReader;
+```java
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 

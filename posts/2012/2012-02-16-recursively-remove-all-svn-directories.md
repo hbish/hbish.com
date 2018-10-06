@@ -10,11 +10,11 @@ tags:
   - svn
   - tips
   - unix
-
 ---
+
 While moving some of my old projects from my svn server at home over to Bitbucket, I used this snippets to remove all the .svn directories.
 
-```shell
+```bash
 find . -name ".svn" -type d -exec rm -rf {} \;
 ```
 

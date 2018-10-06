@@ -11,16 +11,22 @@ tags:
   - osx
   - setup
   - yosemite
-
 ---
+
 Apple has disabled key repeats by default in Yosemite. To enable, just run:
 
-<pre class="lang:sh decode:true " >defaults write -g ApplePressAndHoldEnabled -bool false</pre>
+```bash
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
 
 In case you don&#8217;t like the delay with key repeats, you can remove it by running:
 
-<pre class="lang:sh decode:true " >defaults write NSGlobalDomain KeyRepeat -int 0</pre>
+```bash
+defaults write NSGlobalDomain KeyRepeat -int 0
+```
 
 and of course disable the annoying spell checker
 
-<pre class="lang:sh decode:true " >defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false</pre>
+```bash
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+```

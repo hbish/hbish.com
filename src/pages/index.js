@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
-import { rhythm } from '../utils/typography'
+import { rhythm, scale } from '../utils/typography'
 import { SectionTitle } from '../components'
 import styled from 'styled-components'
 
@@ -43,7 +43,8 @@ class BlogIndex extends React.Component {
               <div key={node.fields.slug}>
                 <h3
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    // fontSize: rhythm(4 / 5),
+                    marginBottom: rhythm(3 / 4),
                   }}
                 >
                   <Link to={node.fields.slug}>{title}</Link>

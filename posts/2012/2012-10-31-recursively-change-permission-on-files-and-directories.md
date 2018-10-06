@@ -11,22 +11,22 @@ tags:
   - permission
   - recursive
   - unix
-
 ---
+
 Recursively change permission on ONLY directories
 
-```shell
+```bash
 find . -type d -exec chmod 755 {} \;
 ```
 
 Recursively change permission on ONLY files
 
-```shell
+```bash
 find . -type f -exec chmod 644 {} \;
 ```
 
 Recursively change permission on a certain file extension
 
-```shell
+```bash
 find . -type f -name '*.css' -exec chmod 644 {} \;
 ```

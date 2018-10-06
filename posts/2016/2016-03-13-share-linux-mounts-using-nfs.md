@@ -11,19 +11,22 @@ tags:
   - linux
   - mounts
   - nfs
-
 ---
+
 I&#8217;ve moved all my disk mounts on my HP Proliant Server over from Samba to NFS.
 
 The steps below are for a simple setup used in my own home and by no means secure.
 
 ### Install NFS
 
-<pre class="lang:sh decode:true " >sudo apt-get install rpcbind nfs-kernel-server</pre>
+```bash
+sudo apt-get install rpcbind nfs-kernel-server
+```
 
 ### Setup Configuration File
 
-<pre class="lang:sh decode:true " >sudo vim /etc/exports
+```bash
+sudo vim /etc/exports
 
 # Added the following line to the file (add additional lines for new shares)
 #
@@ -32,10 +35,13 @@ The steps below are for a simple setup used in my own home and by no means secur
 # - YYYY: anonuid = maps all anonymous connections to a uid local to the server
 # - ZZZZ: anongid = maps all anonymous connections to a gid local to the server
 
-&lt;path to share> &lt;client ip or subnet>(rw,sync,no_subtree_check,insecure,anonuid=&lt;YYYY>,anongid=&lt;ZZZZ>)</pre>
+<path to share> <client ip or subnet>(rw,sync,no_subtree_check,insecure,anonuid=<YYYY>,anongid=<ZZZZ>)
+```
 
 ### Restart NFS Server
 
-<pre class="lang:sh decode:true " >sudo service nfs-kernel-server restart</pre>
+```bash
+sudo service nfs-kernel-server restart
+```
 
 Additional Info: <https://help.ubuntu.com/community/SettingUpNFSHowTo>

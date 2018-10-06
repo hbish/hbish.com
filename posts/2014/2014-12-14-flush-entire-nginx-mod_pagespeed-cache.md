@@ -12,15 +12,18 @@ tags:
   - nginx
   - notes
   - pagespeed
-
 ---
+
 While removing the entire cache folder is perfectly fine, according to [pagespeed docs][1], the safest way of doing so is to touch the cache.flush file.
 
-    sudo touch /var/ngx_pagespeed_cache/cache.flush
-    
+```bash
+sudo touch /var/ngx_pagespeed_cache/cache.flush
+```
 
 Depending how your nginx installation is setup, you may need to make www-data the owner for this to make the magic happen.
 
-    sudo chown www-data:www-data /var/ngx_pagespeed_cache/cache.flush
+```bash
+sudo chown www-data:www-data /var/ngx_pagespeed_cache/cache.flush
+```
 
- [1]: https://developers.google.com/speed/pagespeed/module/system
+[1]: https://developers.google.com/speed/pagespeed/module/system

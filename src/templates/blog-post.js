@@ -7,6 +7,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
+import '../utils/prismjs-theme.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class BlogPostTemplate extends React.Component {
       box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
       max-width: 1000px;
       border-radius: 1rem;
-      padding: 2rem 4rem;
+      padding: 2rem 3rem;
       background-color: 'white';
     `
 

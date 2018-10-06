@@ -1,24 +1,7 @@
 import Typography from 'typography'
+import fairyGatesTheme from 'typography-theme-fairy-gates'
 
-const typography = new Typography({
-  title: 'Minimal',
-  baseFontSize: '18px',
-  baseLineHeight: 1.36,
-  scaleRatio: 3.157,
-  headerFontFamily: ['Bitter', 'sans-serif'],
-  bodyFontFamily: ['Open Sans', 'sans-serif'],
-  headerWeight: 500,
-  googleFonts: [
-    {
-      name: 'Bitter',
-      styles: ['700'],
-    },
-    {
-      name: 'Open Sans',
-      styles: ['400'],
-    },
-  ],
-})
+const typography = new Typography(fairyGatesTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

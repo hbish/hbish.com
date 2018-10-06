@@ -14,7 +14,8 @@ tags:
 ---
 This is one of my most hated thing in Java whenever a friend asked to have a look at their code and it has to do with String Concatenation. String concatenation is really easy in Java, all we do is add (+) string together but this has its pitfalls especially when you&#8217;re concatenating amount of data. I remember on one occasion I saw something like this in one of my friends code to print out all of the user Ids from a database with more than 30000 entries.
 
-<pre><code class="java">String uid, name;
+```java
+String uid, name;
 sqlStatement = conn.prepareStatement("SELECT uid, name FROM Users");
 conn = DriverManager.getConnection(url + db, user, pass);
 ResultSet rs = sqlStatement.executeQuery();
@@ -29,7 +30,8 @@ This is bad because we are appending a string to a existing one over and over. L
 
 For large datasets we should always use StringBuilders due to its performance gain. Below is a really simple benchmark comparing the performance of a simple String.concat() vs. StringBuilder.append() vs. StringBuffer.append(). The result is in milliseconds (code is available below the article).
 
-<pre><code class="java">String.concat() - 4354
+```java
+String.concat() - 4354
 StringBuffer.append() - 3
 StringBuilder.append() - 2
 ```
@@ -42,7 +44,8 @@ You can see the result that String.concat() is horrendously slow, in fact its ex
 
 But what about the differences between StringBuffer and StringBuilder? I think this is worth a post of its own, or you can play around with the code below and find out yourself.
 
-<pre><code class="java">public class Strings {
+```java
+public class Strings {
   public static void main(String[] args) {
     int LIMIT = 30000;
     long t;
