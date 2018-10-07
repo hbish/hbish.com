@@ -8,6 +8,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js')
+    const blogListing = path.resolve('./src/templates/blog-listing.js')
+
     resolve(
       graphql(
         `
@@ -51,6 +53,25 @@ exports.createPages = ({ graphql, actions }) => {
               slug: post.node.fields.slug,
               previous,
               next,
+            },
+          })
+        })
+
+        // Create blog post lists
+        const postsPerPage = 5
+        const numPages = Math.ceil(posts.length / postsPerPage)
+
+        _.times(numPages, i => {
+          if (i === 0) return
+
+          createPage({
+            path: `/page/${i + 1}`,
+            component: path.resolve('./src/templates/blog-listing.js'),
+            context: {
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages,
+              currentPage: i + 1,
             },
           })
         })

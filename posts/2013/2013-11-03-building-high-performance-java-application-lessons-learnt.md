@@ -22,7 +22,7 @@ Surprisingly, this opportunity has turned out to be a great learning experience 
 
 - Try to use `long`/`double` instead of `BigDecimal` for monetary calculation
 - Round result of multiplication/division calculation to the smallest currency unit
-- Don&#8217;t convert `double` to `BigDecimal`, convert using a `string` instead
+- Don't convert `double` to `BigDecimal`, convert using a `string` instead
 
 ## 2. Caching
 

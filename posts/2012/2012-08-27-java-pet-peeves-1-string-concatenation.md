@@ -10,9 +10,9 @@ tags:
   - java
   - peeves
   - programming
-
 ---
-This is one of my most hated thing in Java whenever a friend asked to have a look at their code and it has to do with String Concatenation. String concatenation is really easy in Java, all we do is add (+) string together but this has its pitfalls especially when you&#8217;re concatenating amount of data. I remember on one occasion I saw something like this in one of my friends code to print out all of the user Ids from a database with more than 30000 entries.
+
+This is one of my most hated thing in Java whenever a friend asked to have a look at their code and it has to do with String Concatenation. String concatenation is really easy in Java, all we do is add (+) string together but this has its pitfalls especially when you're concatenating amount of data. I remember on one occasion I saw something like this in one of my friends code to print out all of the user Ids from a database with more than 30000 entries.
 
 ```java
 String uid, name;
@@ -26,7 +26,7 @@ while(rs.next()) {
 }
 ```
 
-This is bad because we are appending a string to a existing one over and over. Lets go way back and see what the documentation says about the String object. According to the Java documentation, &#8220;_Strings are constant; their values cannot be changed after they are created._&#8221; or in other words String objects are immutable. So what really happens when we are changing the value of the String is that we are really creating new String objects and the variable gets referenced to it. So concatenating strings by appending it &#8216;n&#8217; times we create &#8216;n&#8217; new objects and ever time the old ones are dropped at runtime. This process is very time consuming and very CPU intensive. So what can we do about this? Well we can use StringBuilders (If unavailable use StringBuffers instead). I will explain the reasons for this below.
+This is bad because we are appending a string to a existing one over and over. Lets go way back and see what the documentation says about the String object. According to the Java documentation, "_Strings are constant; their values cannot be changed after they are created._" or in other words String objects are immutable. So what really happens when we are changing the value of the String is that we are really creating new String objects and the variable gets referenced to it. So concatenating strings by appending it 'n' times we create 'n' new objects and ever time the old ones are dropped at runtime. This process is very time consuming and very CPU intensive. So what can we do about this? Well we can use StringBuilders (If unavailable use StringBuffers instead). I will explain the reasons for this below.
 
 For large datasets we should always use StringBuilders due to its performance gain. Below is a really simple benchmark comparing the performance of a simple String.concat() vs. StringBuilder.append() vs. StringBuffer.append(). The result is in milliseconds (code is available below the article).
 
@@ -38,9 +38,9 @@ StringBuilder.append() - 2
 
 You can see the result that String.concat() is horrendously slow, in fact its exponentially slower as the the amount of time you try to concatenate the string increases as larger objects are created as the string gets bigger.I think the only time you should use be using String.concat() is:
 
-  1. when you want readable code; 
-  2. if you only have 2-3 operands; or 
-  3. you&#8217;re just too lazy to deal with Java&#8217;s boilerplate codes.
+1. when you want readable code;
+2. if you only have 2-3 operands; or
+3. you're just too lazy to deal with Java's boilerplate codes.
 
 But what about the differences between StringBuffer and StringBuilder? I think this is worth a post of its own, or you can play around with the code below and find out yourself.
 

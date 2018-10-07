@@ -19,7 +19,7 @@ Apple has disabled key repeats by default in Yosemite. To enable, just run:
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
-In case you don&#8217;t like the delay with key repeats, you can remove it by running:
+In case you don't like the delay with key repeats, you can remove it by running:
 
 ```bash
 defaults write NSGlobalDomain KeyRepeat -int 0

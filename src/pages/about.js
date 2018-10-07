@@ -32,7 +32,7 @@ class AboutPage extends React.Component {
           <h2>Education</h2>
           <ul>
             <li>
-              2008 &#8211; 2012: Bachelor of Engineering (Software), Diploma in
+              2008 - 2012: Bachelor of Engineering (Software), Diploma in
               Engineering Practice @{' '}
               <a href="http://www.uts.edu.au/">
                 University of Technology, Sydney

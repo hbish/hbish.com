@@ -33,7 +33,7 @@ class Bio extends React.Component {
           />
         </div>
         <div>
-          <p style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+          <p>
             I'm <strong>Ben Shi</strong>, a Sydney-based Full Stack Software
             Engineer specialising in micro-services and API development. This is
             a playground for me to document my learnings and experiences as a

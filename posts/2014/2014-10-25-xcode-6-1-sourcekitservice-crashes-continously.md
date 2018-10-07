@@ -10,9 +10,9 @@ tags:
   - sourcekitservice
   - swift
   - xcode
-
 ---
-After importing some files I started getting this error every few seconds. I tried restarting Xcode and went through all the obvious steps but to no avail. The diagnostic logs wasn&#8217;t helpful either.
+
+After importing some files I started getting this error every few seconds. I tried restarting Xcode and went through all the obvious steps but to no avail. The diagnostic logs wasn't helpful either.
 
 Turned out all I had to blow away all the derived data.
 

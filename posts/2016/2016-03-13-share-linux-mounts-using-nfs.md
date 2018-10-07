@@ -13,7 +13,7 @@ tags:
   - nfs
 ---
 
-I&#8217;ve moved all my disk mounts on my HP Proliant Server over from Samba to NFS.
+I've moved all my disk mounts on my HP Proliant Server over from Samba to NFS.
 
 The steps below are for a simple setup used in my own home and by no means secure.
 

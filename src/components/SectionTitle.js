@@ -8,7 +8,7 @@ const SectionTitle = styled.div`
   color: #191919;
   position: relative;
   padding-bottom: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 
   &:after {
     content: '';

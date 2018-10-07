@@ -11,9 +11,9 @@ tags:
   - osx
 ---
 
-I never liked the idea of widgets in Windows and I don&#8217;t intend to start liking them when I&#8217;m using OSX. In OSX widgets are kept separate from the desktop and only appear when you press fn+f12, to me this defeats the purpose of having widgets in the first place.
+I never liked the idea of widgets in Windows and I don't intend to start liking them when I'm using OSX. In OSX widgets are kept separate from the desktop and only appear when you press fn+f12, to me this defeats the purpose of having widgets in the first place.
 
-So I hear you ask, why not disable it? That&#8217;s exact what I did and here is how. To disable the dashboard, open up your terminal and type:
+So I hear you ask, why not disable it? That's exact what I did and here is how. To disable the dashboard, open up your terminal and type:
 
 ```bash
 defaults write com.apple.dashboard mcx-disabled -boolean YES

@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
       grid-column: 2;
       box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
       border-radius: 1rem;
-      padding: 2rem 4rem;
+      padding: 2rem 2rem;
       overflow: hidden;
     `
 
@@ -40,17 +40,29 @@ class BlogIndex extends React.Component {
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
-              <div key={node.fields.slug}>
-                <h3
-                  style={{
-                    // fontSize: rhythm(4 / 5),
-                    marginBottom: rhythm(3 / 4),
-                  }}
-                >
-                  <Link to={node.fields.slug}>{title}</Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                key={node.fields.slug}
+              >
+                <div>
+                  <div>dfd</div>
+                  <div
+                    style={{
+                      float: 'right',
+                    }}
+                  >
+                    <small>{node.frontmatter.date}</small>
+                  </div>
+                </div>
+                <div>
+                  <h3>
+                    <Link to={node.fields.slug}>{title}</Link>{' '}
+                  </h3>
+                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                </div>
               </div>
             )
           })}
@@ -71,7 +83,10 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 5
+    ) {
       edges {
         node {
           excerpt

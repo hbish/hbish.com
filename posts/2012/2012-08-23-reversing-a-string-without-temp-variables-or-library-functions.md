@@ -10,17 +10,17 @@ tags:
   - exercise
   - java
   - programming
-
 ---
-So yesterday my friend [Jimmy][1] asked me to reverse a string while we were in one of the computers labs at uni. At first I thought &#8220;hey, isn&#8217;t this like really simple and straightforward, could just use a StringBuffer?&#8221;. Then Jimmy said &#8220;You can&#8217;t use any library functions or temporary variables&#8221;. I thought for a second and said &#8220;you can do it with arrays&#8221; and surely you can definitely do it with arrays as shown by one of our other friend Kevin.
 
-But was that was messy and surely it wasn&#8217;t the only solutions. Like many programming problems, this isn&#8217;t!
+So yesterday my friend [Jimmy][1] asked me to reverse a string while we were in one of the computers labs at uni. At first I thought "hey, isn't this like really simple and straightforward, could just use a StringBuffer?". Then Jimmy said "You can't use any library functions or temporary variables". I thought for a second and said "you can do it with arrays" and surely you can definitely do it with arrays as shown by one of our other friend Kevin.
+
+But was that was messy and surely it wasn't the only solutions. Like many programming problems, this isn't!
 
 I figured this can be done with a little bit of looping and string manipulation (Note: implementation is in Java). As shown in **line 25-27**, I looped through the string and reassembled it n times. The reassembling is actually quiet tricky because I reconstructed the original string by cutting and carefully rearranging it every loop. This solution is pretty messy and hard to comprehend without a pen and paper to follow through with it (well at least for me).
 
-It was just past 10 o&#8217;clock and I looked at the clock on the top right of my MBP. The time was 10:01 pm, then all of a sudden an idea struck me, I could have just reverse the string using a reverse loop, append it to the original string and cut the palindromic string leaving only the latter half. This solution (**line 33-36**) was much simpler and easier to remember.
+It was just past 10 o'clock and I looked at the clock on the top right of my MBP. The time was 10:01 pm, then all of a sudden an idea struck me, I could have just reverse the string using a reverse loop, append it to the original string and cut the palindromic string leaving only the latter half. This solution (**line 33-36**) was much simpler and easier to remember.
 
-Can&#8217;t believe something so simple took me this long to think up. Thank you **palindrome**!
+Can't believe something so simple took me this long to think up. Thank you **palindrome**!
 
 ```java
 import java.io.BufferedReader;
@@ -65,4 +65,4 @@ public class reverseString {
 }
 ```
 
- [1]: http://blaytenshi.net/
+[1]: http://blaytenshi.net/

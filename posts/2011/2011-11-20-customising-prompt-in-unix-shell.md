@@ -16,7 +16,7 @@ I use the terminal a lot and quiet often enough I felt that it did not give me e
 
 <img src="http://res.cloudinary.com/df1zyk23d/image/upload/v1511621364/prompt_qfw0pp.png" alt="prompt" width="699" height="515" sizes="(max-width: 699px) 100vw, 699px" />
 
-You can temporarily test it out by executing the following command in shell, but you&#8217;ll lose this once you close and open a new session. Alternatively, if you want to keep the change you can simply add this to your &#8216;.bashrc&#8217; file.
+You can temporarily test it out by executing the following command in shell, but you'll lose this once you close and open a new session. Alternatively, if you want to keep the change you can simply add this to your '.bashrc' file.
 
 ```bash
 export PS1="[\A] \e[0;31m\u\e[m at \e[0;33m\h\e[m in \e[0;32m\W\n\e[m\$ "
@@ -25,7 +25,7 @@ export PS1="[\A] \e[0;31m\u\e[m at \e[0;33m\h\e[m in \e[0;32m\W\n\e[m\$ "
 Lets dive into the syntax a little shall we.
 
 - **\A** : the current time in 24-hour HH:MM format
-- **\e[n;yym** : start of the color tag where &#8216;n;yy&#8217; is the color of the string within the opening and closing tag
+- **\e[n;yym** : start of the color tag where 'n;yy' is the color of the string within the opening and closing tag
 - **\e[m** : end of the color tag
 - **\u** : username of current user
 - **\h** : host name
