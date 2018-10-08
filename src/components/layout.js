@@ -4,6 +4,9 @@ import { Link } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
 import Footer from './Footer'
 
+import 'font-awesome/css/font-awesome.css'
+import './all.sass'
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props

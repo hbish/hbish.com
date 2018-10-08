@@ -13,6 +13,7 @@ fairyGatesTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   li: {
     marginBottom: rhythm(1 / 6),
   },
+  ul: {},
 })
 
 const typography = new Typography(fairyGatesTheme)

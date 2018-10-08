@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.7.1",
+    "bulma": "^0.7.1",
+    "font-awesome": "^4.7.0",
     "gatsby": "^2.0.0",
     "gatsby-plugin-feed": "^2.0.5",
     "gatsby-plugin-google-analytics": "^2.0.5",

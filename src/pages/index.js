@@ -48,13 +48,17 @@ class BlogIndex extends React.Component {
                 key={node.fields.slug}
               >
                 <div>
-                  <div>dfd</div>
-                  <div
-                    style={{
-                      float: 'right',
-                    }}
-                  >
+                  <div>
                     <small>{node.frontmatter.date}</small>
+                    <div
+                      style={{
+                        float: 'right',
+                      }}
+                    >
+                      <small>
+                        <strong>{node.frontmatter.categories}</strong>
+                      </small>
+                    </div>
                   </div>
                 </div>
                 <div>
@@ -66,6 +70,25 @@ class BlogIndex extends React.Component {
               </div>
             )
           })}
+          <ul
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              listStyle: 'none',
+              padding: 0,
+            }}
+          >
+            <li
+              key="1"
+              style={{
+                margin: 0,
+              }}
+            >
+              <Link to="/page/2"> Older Posts</Link>
+            </li>
+          </ul>
         </Content>
       </Layout>
     )
@@ -96,6 +119,8 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            tags
+            categories
           }
         }
       }
