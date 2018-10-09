@@ -6,9 +6,19 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
+import styled from 'styled-components'
+import { SectionTitle } from '../components'
 
 class BlogIndex extends React.Component {
   render() {
+    const Content = styled.div`
+      grid-column: 2;
+      box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
+      border-radius: 1rem;
+      padding: 2rem 2rem;
+      overflow: hidden;
+    `
+
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
       this,
@@ -29,110 +39,85 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <Bio />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
+
+        <Content>
+          <SectionTitle>
+            Page {currentPage} of {numPages}
+          </SectionTitle>
+
+          {posts.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug
+            return (
+              <div
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
+                key={node.fields.slug}
               >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            listStyle: 'none',
-            padding: 0,
-          }}
-        >
-          {!isFirst && (
-            <Link to={prevPage} rel="prev">
-              ← Previous Page
-            </Link>
-          )}
-          {Array.from({ length: numPages }, (_, i) => (
-            <li
-              key={`pagination-number${i + 1}`}
-              style={{
-                margin: 0,
-              }}
-            >
+                <div>
+                  <div>
+                    <small>{node.frontmatter.date}</small>
+                    <div
+                      style={{
+                        float: 'right',
+                      }}
+                    >
+                      <small>
+                        <strong>{node.frontmatter.categories}</strong>
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>
+                    <Link to={node.fields.slug}>{title}</Link>{' '}
+                  </h3>
+                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                </div>
+              </div>
+            )
+          })}
+
+          <nav
+            class="pagination is-centered"
+            role="navigation"
+            aria-label="pagination"
+          >
+            {!isFirst && (
               <Link
-                to={`/${i === 0 ? '' : i + 1}`}
-                style={{
-                  padding: rhythm(1 / 4),
-                  textDecoration: 'none',
-                  color: i + 1 === currentPage ? '#ffffff' : '',
-                  background: i + 1 === currentPage ? '#007acc' : '',
-                }}
+                to={`${currentPage - 1 === 1 ? '/' : '/page/' + prevPage}`}
+                rel="prev"
+                className="pagination-previous"
               >
-                {i + 1}
+                ← Previous Page
               </Link>
-            </li>
-          ))}
-          {!isLast && (
-            <Link to={nextPage} rel="next">
-              Next Page →
-            </Link>
-          )}
-        </ul>
-        <nav
-          class="pagination is-centered"
-          role="navigation"
-          aria-label="pagination"
-        >
-          <a class="pagination-previous">Previous</a>
-          <a class="pagination-next">Next page</a>
-          <ul class="pagination-list">
-            <li>
-              <a class="pagination-link" aria-label="Goto page 1">
-                1
-              </a>
-            </li>
-            <li>
-              <span class="pagination-ellipsis">&hellip;</span>
-            </li>
-            <li>
-              <a class="pagination-link" aria-label="Goto page 45">
-                45
-              </a>
-            </li>
-            <li>
-              <a
-                class="pagination-link is-current"
-                aria-label="Page 46"
-                aria-current="page"
+            )}
+            <ul class="pagination-list">
+              {Array.from({ length: numPages }, (_, i) => (
+                <li key={`pagination-number${i + 1}`}>
+                  <Link
+                    to={`${i === 0 ? '/' : '/page/' + (i + 1)}`}
+                    className={`pagination-link ${
+                      i + 1 === currentPage ? 'is-current' : ''
+                    }`}
+                  >
+                    {i + 1}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {!isLast && (
+              <Link
+                to={'/page/' + nextPage}
+                rel="next"
+                className="pagination-next"
               >
-                46
-              </a>
-            </li>
-            <li>
-              <a class="pagination-link" aria-label="Goto page 47">
-                47
-              </a>
-            </li>
-            <li>
-              <span class="pagination-ellipsis">&hellip;</span>
-            </li>
-            <li>
-              <a class="pagination-link" aria-label="Goto page 86">
-                86
-              </a>
-            </li>
-          </ul>
-        </nav>
+                Next Page →
+              </Link>
+            )}
+          </nav>
+        </Content>
       </Layout>
     )
   }
@@ -162,6 +147,8 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            categories
+            tags
           }
         }
       }

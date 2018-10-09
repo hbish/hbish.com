@@ -70,25 +70,15 @@ class BlogIndex extends React.Component {
               </div>
             )
           })}
-          <ul
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              listStyle: 'none',
-              padding: 0,
-            }}
+          <nav
+            class="pagination is-centered"
+            role="navigation"
+            aria-label="pagination"
           >
-            <li
-              key="1"
-              style={{
-                margin: 0,
-              }}
-            >
-              <Link to="/page/2"> Older Posts</Link>
-            </li>
-          </ul>
+            <Link to="/page/2" rel="prev" className="pagination-previous">
+              ← Older Posts
+            </Link>
+          </nav>
         </Content>
       </Layout>
     )

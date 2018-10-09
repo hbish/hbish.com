@@ -9,11 +9,19 @@ fairyGatesTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   },
   a: {
     backgroundImage: 'none',
+    textShadow: 'none',
   },
   li: {
     marginBottom: rhythm(1 / 6),
   },
-  ul: {},
+  ul: {
+    listStyleType: 'none',
+    margin: 0,
+  },
+  'article ul': {
+    listStyleType: 'disc',
+    marginLeft: rhythm(1),
+  },
 })
 
 const typography = new Typography(fairyGatesTheme)
