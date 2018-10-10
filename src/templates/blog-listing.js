@@ -90,7 +90,7 @@ class BlogIndex extends React.Component {
                 rel="prev"
                 className="pagination-previous"
               >
-                ← Previous Page
+                {'<<'} Previous Page
               </Link>
             )}
             <ul class="pagination-list">
@@ -113,7 +113,7 @@ class BlogIndex extends React.Component {
                 rel="next"
                 className="pagination-next"
               >
-                Next Page →
+                Next Page {'>>'}
               </Link>
             )}
           </nav>

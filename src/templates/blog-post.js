@@ -34,55 +34,73 @@ class BlogPostTemplate extends React.Component {
         />
         <Content>
           <h1>{post.frontmatter.title}</h1>
-          <p
+          <div
+            className="columns"
             style={{
-              ...scale(-1 / 5),
-              display: 'block',
-              marginBottom: rhythm(1),
-              marginTop: rhythm(-1),
-              float: 'right',
+              fontSize: rhythm(3 / 5),
+              fontWeight: 700,
             }}
           >
-            {post.frontmatter.date}
-          </p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className="column is-half">
+              Posted Under: <em>{post.frontmatter.categories}</em>
+            </div>
+            <div
+              className="column is-half"
+              style={{
+                textAlign: 'right',
+              }}
+            >
+              {post.frontmatter.date}
+            </div>
+          </div>
+          <div className="columns">
+            <div
+              className="column"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          </div>
+          <div className="columns">
+            <nav
+              class="pagination is-centered column"
+              role="navigation"
+              aria-label="pagination"
+            >
+              <ul class="pagination-list">
+                {previous && (
+                  <li className="pagination-previous">
+                    <Link to={previous.fields.slug} rel="prev">
+                      {'<< ' + previous.frontmatter.title}
+                    </Link>
+                  </li>
+                )}
+
+                {next && (
+                  <li className="pagination-next">
+                    <Link to={next.fields.slug} rel="next">
+                      {next.frontmatter.title + ' >>'}
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </nav>
+          </div>
+
           <hr
             style={{
+              marginTop: rhythm(1),
               marginBottom: rhythm(1),
             }}
           />
 
-          <ul
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              listStyle: 'none',
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-
-          <div
-            style={{
-              ...scale(-1 / 6),
-            }}
-          >
-            <Bio />
+          <div className="columns">
+            <div
+              className="column is-full"
+              style={{
+                ...scale(-1 / 6),
+              }}
+            >
+              <Bio />
+            </div>
           </div>
         </Content>
       </Layout>
@@ -107,6 +125,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        categories
+        tags
       }
     }
   }

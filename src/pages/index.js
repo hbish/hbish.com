@@ -75,9 +75,11 @@ class BlogIndex extends React.Component {
             role="navigation"
             aria-label="pagination"
           >
-            <Link to="/page/2" rel="prev" className="pagination-previous">
-              ← Older Posts
-            </Link>
+            <ul className="pagination-list">
+              <Link to="/page/2" rel="prev" className="pagination-previous">
+                {'<<'} Older Posts
+              </Link>
+            </ul>
           </nav>
         </Content>
       </Layout>
