@@ -51,4 +51,4 @@ ffmpeg -i video.avi -vn -ar 44100 -ac 2 -ab 192k -f mp3 output.mp3
 ffmpeg -i video.flv -ar 44100 -ac 2 -ab 192k -f mp3 output.mp3
 ```
 
-[1]: http://ffmpeg.org/
+[1]: https://ffmpeg.org/

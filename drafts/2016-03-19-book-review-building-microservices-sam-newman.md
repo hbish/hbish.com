@@ -12,8 +12,8 @@ tags:
   - programming
   - sam newman
   - software architecture
-
 ---
-<img src="http://hbish.com/wp-content/uploads/2016/03/building-microservices-229x300.jpg" alt="building microservices" width="229" height="300" class="hangright size-medium wp-image-137" srcset="https://hbish.com/wp-content/uploads/2016/03/building-microservices-229x300.jpg 229w, https://hbish.com/wp-content/uploads/2016/03/building-microservices.jpg 500w" sizes="(max-width: 229px) 100vw, 229px" />
+
+![Building Microservices - Sam Newman](./building-microservices.jpg)
 
 As more and more company embark on the pain-staking task of migrating their monolithic application to a microservicestf

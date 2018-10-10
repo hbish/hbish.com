@@ -31,7 +31,8 @@ sudo vim /etc/exports
 # Added the following line to the file (add additional lines for new shares)
 #
 # - Path to share: replace with path you'd like to share e.g. /mnt/shareme
-# - Client ip or subnet: replace with the ip address of the client or a collection of ip address using subnet masks e.g. 10.1.1.1 or 10.1.1.0/24
+# - Client ip or subnet: replace with the ip address of the client or a
+#   collection of ip address using subnet masks e.g. 10.1.1.1 or 10.1.1.0/24
 # - YYYY: anonuid = maps all anonymous connections to a uid local to the server
 # - ZZZZ: anongid = maps all anonymous connections to a gid local to the server
 

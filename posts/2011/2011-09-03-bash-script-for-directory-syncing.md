@@ -12,7 +12,7 @@ tags:
   - unix
 ---
 
-Text: Found it on archlinux forum earlier tonight. This bash script will only sync one way, so it will come in handy during backup or offloading data from my old servers. I mean if I ever wanted bi-directional syncing, there is always (link: http://everythinglinux.org/rsync/ text: rsync).
+Text: Found it on archlinux forum earlier tonight. This bash script will only sync one way, so it will come in handy during backup or offloading data from my old servers. I mean if I ever wanted bi-directional syncing, there is always (link: https://everythinglinux.org/rsync/ text: rsync).
 
 To sync, just run:
 
@@ -20,6 +20,6 @@ To sync, just run:
 esync.sh -y Dir1 Dir2
 ```
 
-Download: (link: http://www.doomicide.1x.net/scripts/esync.sh text: esync.sh)
+Download: (link: https://www.doomicide.1x.net/scripts/esync.sh text: esync.sh)
 
 Source: (link: https://bbs.archlinux.org/viewtopic.php?id=12557)

@@ -7,6 +7,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
+import { SectionTitle } from '../components'
 import '../utils/prismjs-theme.css'
 
 class BlogPostTemplate extends React.Component {
@@ -33,6 +34,7 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
         <Content>
+          <SectionTitle>Blog Post</SectionTitle>
           <h1>{post.frontmatter.title}</h1>
           <div
             className="columns"
@@ -61,7 +63,7 @@ class BlogPostTemplate extends React.Component {
           </div>
           <div className="columns">
             <nav
-              class="pagination is-centered column"
+              class="pagination is-centered column is-small"
               role="navigation"
               aria-label="pagination"
             >

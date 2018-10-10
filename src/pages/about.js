@@ -34,13 +34,13 @@ class AboutPage extends React.Component {
             <li>
               2008 - 2012: Bachelor of Engineering (Software), Diploma in
               Engineering Practice @{' '}
-              <a href="http://www.uts.edu.au/">
+              <a href="https://www.uts.edu.au/">
                 University of Technology, Sydney
               </a>
             </li>
             <li>
               2012: Innovation, Technology and Entrepreneurship in China @{' '}
-              <a href="http://hku.hk">The University of Hong Kong</a>
+              <a href="https://hku.hk">The University of Hong Kong</a>
             </li>
           </ul>
           <h2>Special Achievements</h2>
@@ -54,10 +54,10 @@ class AboutPage extends React.Component {
             </li>
             <li>
               Winner of Telstra/Pollenizer Appiness Hackathon 2013 w/ Poppy [
-              <a href="http://exchange.telstra.com.au/2013/06/04/team-poppy-named-winner-of-inaugural-appiness-hackathon/">
+              <a href="https://exchange.telstra.com.au/2013/06/04/team-poppy-named-winner-of-inaugural-appiness-hackathon/">
                 article
               </a>
-              , <a href="http://youtu.be/sV8BRsQ0m8g">pitch</a>]
+              , <a href="https://youtu.be/sV8BRsQ0m8g">pitch</a>]
             </li>
           </ul>
           <h2>Interests</h2>

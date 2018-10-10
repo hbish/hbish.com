@@ -144,7 +144,7 @@ code[class*='language-css'] {
 }
 
 /* overrides color-values for the Line Numbers plugin
-  * http://prismjs.com/plugins/line-numbers/
+  * https://prismjs.com/plugins/line-numbers/
   */
 .line-numbers .line-numbers-rows {
   border-right-color: #a5a5a5;
@@ -155,7 +155,7 @@ code[class*='language-css'] {
 }
 
 /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+ * https://prismjs.com/plugins/line-highlight/
  */
 .line-highlight {
   background: rgba(193, 222, 241, 0.2);
@@ -169,4 +169,14 @@ code[class*='language-css'] {
     rgba(193, 222, 241, 0.2) 70%,
     rgba(221, 222, 241, 0)
   );
+}
+
+/**
+ * Add back the container background-color, border-radius, padding, margin
+ * and overflow that we removed from <pre>.
+ */
+.gatsby-highlight {
+  overflow: auto;
+  word-wrap: normal;
+  max-width: 800px !important; /*workaround for Prism scrollbars*/
 }

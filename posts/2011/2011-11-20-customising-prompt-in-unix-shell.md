@@ -14,7 +14,7 @@ tags:
 
 I use the terminal a lot and quiet often enough I felt that it did not give me enough information on where I am or which shell I am in or even which user I am. So I went ahead and changed my shell prompt to give it a bit more information, at the same time highlighting important bit of information.
 
-<img src="http://res.cloudinary.com/df1zyk23d/image/upload/v1511621364/prompt_qfw0pp.png" alt="prompt" width="699" height="515" sizes="(max-width: 699px) 100vw, 699px" />
+![Shell Prompt](./prompt_qfw0pp.png)
 
 You can temporarily test it out by executing the following command in shell, but you'll lose this once you close and open a new session. Alternatively, if you want to keep the change you can simply add this to your '.bashrc' file.
 

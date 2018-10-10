@@ -45,4 +45,4 @@ So rather than thinking of a design pattern that will encapsulate the project in
 
 This was my summary of what has happened throughout the course of my project whilst on training. I have definitely learnt a lot about system design, agile and collaboration. I will have more articles in the coming weeks about those specific areas.
 
-[1]: http://martinfowler.com/articles/designDead.html#PlannedAndEvolutionaryDesign
+[1]: https://martinfowler.com/articles/designDead.html#PlannedAndEvolutionaryDesign

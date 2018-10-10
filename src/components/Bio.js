@@ -49,7 +49,7 @@ class Bio extends React.Component {
             }}
           >
             <strong>Contact:</strong> [<a href="mailto:ben@hbish.com">email</a>{' '}
-            | <a href="http://twitter.com/hbish/">twitter</a>|{' '}
+            | <a href="https://twitter.com/hbish/">twitter</a>|{' '}
             <a href="https://au.linkedin.com/in/benshi/">linkedin</a>]
           </span>
         </div>

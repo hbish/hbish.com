@@ -1,5 +1,5 @@
 ---
-title: 'Questions to ask when choosing new tools, frameworks & libraries'
+title: 'Choosing between Frameworks & Tools'
 author: ben
 type: post
 date: 2016-03-20T11:26:25+00:00
@@ -16,7 +16,7 @@ tags:
   - tools
 ---
 
-<img src="http://hbish.com/wp-content/uploads/2016/03/searching-for-alternatives-300x225.jpg" alt="finding and assessing alternative tools, frameworks and libraries" width="300" height="225" class="hangright size-medium wp-image-139" srcset="https://hbish.com/wp-content/uploads/2016/03/searching-for-alternatives-300x225.jpg 300w, https://hbish.com/wp-content/uploads/2016/03/searching-for-alternatives.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" />
+![Searching for alternatives](./searching-for-alternatives.jpg)
 
 New tools, frameworks and libraries pop up all the time (especially true in javascript), so how do you assess whether they are the right fit for your project or organisation?
 

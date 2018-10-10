@@ -65,4 +65,4 @@ public class reverseString {
 }
 ```
 
-[1]: http://blaytenshi.net/
+[1]: https://blaytenshi.net/

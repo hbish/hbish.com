@@ -40,21 +40,21 @@ Surprisingly, this opportunity has turned out to be a great learning experience 
 - Use threadpools
 - Avoid `synchronisation` where possible
 - Have flow control to regulate the amount of threads
-- Fork-Join in 1.7 (or (link: http://g.oswego.edu/dl/concurrency-interest/ text: jsr166) in 1.6)
+- Fork-Join in 1.7 (or (link: https://g.oswego.edu/dl/concurrency-interest/ text: jsr166) in 1.6)
 
 ## 4. Java Specifics
 
 - When using `LinkedList`, add/remove elements from the end
 - Avoid `ConcurrentHashMap`, Use (link: https://github.com/boundary/high-scale-lib text: `NonBlockingHashMap`) instead
 - Use LinkedBlockingQueue and ArrayBlockingQueue if you are polling for objects
-- (link: http://lmax-exchange.github.io/disruptor/ text: `Disruptors`) are faster
+- (link: https://lmax-exchange.github.io/disruptor/ text: `Disruptors`) are faster
 - Enable server flag
 
 ```bash
 java -server
 ```
 
-- Enable fast (link: http://hbish.com/blog/Java-pet-peeves-1-string-concatenation text: string concatenation)
+- Enable fast (link: https://hbish.com/blog/Java-pet-peeves-1-string-concatenation text: string concatenation)
 
 ```bash
 java -XX:+OptimizeStringConcat
@@ -64,7 +64,7 @@ java -XX:+OptimizeStringConcat
 
 - GC can be expensive in a high throughput/low latency app
 - Minimise object creation within loops
-- Out-of-the-box GC options sucks! Reduce collection time and numbers by using a different collection method and optimising those options ((link: http://www.oracle.com/technetwork/java/javase/gc-tuning-6-140523.html text: Oracle Doc))
+- Out-of-the-box GC options sucks! Reduce collection time and numbers by using a different collection method and optimising those options ((link: https://www.oracle.com/technetwork/java/javase/gc-tuning-6-140523.html text: Oracle Doc))
 - Static heap size
 
 ## 6. Benchmark

@@ -111,4 +111,4 @@ public class problem3 {
 }
 ```
 
-[1]: http://progsoc.org/wiki/UTS_Programming_Competition_2012
+[1]: https://progsoc.org/wiki/UTS_Programming_Competition_2012

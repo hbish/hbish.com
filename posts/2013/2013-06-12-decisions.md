@@ -19,7 +19,7 @@ tags:
 
 The quote above from Sarah Dessen's Just Listen has resonated with me ever since I saw it. As I approached my graduation I saw myself making a very important choice, career wise. The decision was far from what I had originally imagined. I ultimately gave up a job offer I know I would thoroughly enjoy and opting in for a graduate position at a very reputable investment bank.
 
-<img src="http://hbish.com/wp-content/uploads/2013/06/bye.jpg" alt="bye" width="1170" height="250" class="alignnone size-full wp-image-54" srcset="https://hbish.com/wp-content/uploads/2013/06/bye.jpg 1170w, https://hbish.com/wp-content/uploads/2013/06/bye-300x64.jpg 300w, https://hbish.com/wp-content/uploads/2013/06/bye-1024x218.jpg 1024w" sizes="(max-width: 1170px) 100vw, 1170px" />
+![Goodbye](./bye.jpg)
 
 Now, I cannot say whether I have made the right decision. I think there is no point in speculating as to what "would have happened" or if I would be "better-off" with the other job offer. Thinking back I realised at the time something, somehow has tempted me into moving and all the noise and doubt has clouded why I made the choice in the first place.
 

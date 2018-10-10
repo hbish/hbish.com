@@ -11,7 +11,7 @@ tags:
   - update
 ---
 
-<img src="http://hbish.com/wp-content/uploads/2014/05/palmbeach.jpg" alt="palmbeach" width="1170" height="250" class="alignnone size-full wp-image-57" srcset="https://hbish.com/wp-content/uploads/2014/05/palmbeach.jpg 1170w, https://hbish.com/wp-content/uploads/2014/05/palmbeach-300x64.jpg 300w, https://hbish.com/wp-content/uploads/2014/05/palmbeach-1024x218.jpg 1024w" sizes="(max-width: 1170px) 100vw, 1170px" />
+![Palm Beach, Australia](./palmbeach.jpg)
 
 Checking in for first half of 2013.
 
@@ -35,7 +35,7 @@ My new job has given me the opportunity to meeting a lot more people, this also 
 
 This has been something I wanted to do for a long time but never have the time nor the opportunity to execute it. Until now. Last month I invited my dad and my grandmother over from China for a short holiday, they have never left China before and being able to visit Australia is definitely something on their bucket list. I took some times off from work and showed them around the state and also got them on a trip to Cairns (even I have not been to Cairns myself)!
 
-<img src="http://hbish.com/wp-content/uploads/2014/05/appiness.jpg" alt="appiness" width="1170" height="260" class="alignnone size-full wp-image-58" srcset="https://hbish.com/wp-content/uploads/2014/05/appiness.jpg 1170w, https://hbish.com/wp-content/uploads/2014/05/appiness-300x66.jpg 300w, https://hbish.com/wp-content/uploads/2014/05/appiness-1024x227.jpg 1024w" sizes="(max-width: 1170px) 100vw, 1170px" />
+![Appiness](./appiness.jpg)
 
 **I started participating in philanthropy work**
 
@@ -45,4 +45,4 @@ And finally something I am very proud of is participating in a Charity hackathon
 
 I think 2013 has been great already and the rest of 2013 is only going to go uphill from here. This is all I have for now. See ya at the next checkpoint!
 
-[1]: http://www.telstracrowdsupport.com/t5/SYDNEY-APPINESS-HACKATHON/Sydney-Hackathon-Winners-announced/ba-p/161076
+[1]: https://www.telstracrowdsupport.com/t5/SYDNEY-APPINESS-HACKATHON/Sydney-Hackathon-Winners-announced/ba-p/161076
