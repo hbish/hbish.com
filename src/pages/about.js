@@ -39,7 +39,7 @@ class AboutPage extends React.Component {
               <a href="https://www.crunchbase.com/company/distra">Distra</a>
             </p>
 
-            <h3>An unlucky start</h3>
+            <h3>An unlikely start</h3>
             <p>
               I enjoy coding but it wasn't always what I wanted to do. Growing
               up I always wanted to be a mechanic, I loved solving problems and
