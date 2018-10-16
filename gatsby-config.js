@@ -50,7 +50,7 @@ module.exports = {
         short_name: `hbish`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `##1ca086`,
+        theme_color: `#1ca086`,
         display: `minimal-ui`,
         icon: `static/favicon.png`,
       },
