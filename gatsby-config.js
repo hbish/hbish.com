@@ -65,5 +65,15 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    {
+      resolve: 'gatsby-source-mastodon',
+      options: {
+        api_url: 'https://aus.social/api/v1/',
+        user_id: '8282',
+        limit: 25,
+        access_token:
+          '8bca94b19b11d53842d60b02ea16360606f3832261c819ff64acd7db4ff34897',
+      },
+    },
   ],
 }
