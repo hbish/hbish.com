@@ -24,14 +24,15 @@ class AboutPage extends React.Component {
           <div>
             <h3>The gist</h3>
             <p>
-              I'm a Software Engineer at{' '}
-              <a href="https://versent.com.au">Versent</a>, where we help
-              businesses with big hairy problems like migrating off traditional
-              software infrastructures and building out new API capabilities
-              using modern technology.
+              I'm currently the Head of Engineering at{' '}
+              <a href="https://www.growsuper.com/">GROW</a>, where we aim to disrupt the superannuation administration
+              industry by providing administrators with better user experience and access to more data through the use of
+              distributed ledger technology and APIs.
             </p>
             <p>
               I was previously afilliated with{' '}
+              <a href="https://versent.com.au">Versent</a>
+              {', '}
               <a href="https://www.jpmorgan.com/pages/jpmorgan">J.P Morgan</a>
               {', '}
               <a href="https://www.aciworldwide.com/">ACI Worldwide</a>

@@ -34,10 +34,9 @@ class Bio extends React.Component {
         </div>
         <div>
           <p>
-            I'm <strong>Ben Shi</strong>, a Sydney-based Full Stack Software
-            Engineer specialising in micro-services and API development. This is
-            a playground for me to document my learnings and experiences as a
-            technologist.
+              I'm <strong>Ben Shi</strong>, a Sydney-based software engineer specialising
+              in micro-services and API development. This is a playground for me to document
+              my learnings and experiences as a technologist.
           </p>
           <p>
             You can find out a little bit more about me over{' '}

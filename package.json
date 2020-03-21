@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "hbish.com",
+  "description": "Ben Shi's Blog",
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+    "url": "https://github.com/hbish/hbish.com/issues"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
@@ -49,15 +49,17 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://hbish.com",
   "keywords": [
-    "gatsby"
+    "hbish",
+    "gatsby",
+    "blog"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/hbish/hbish.com.git"
   },
   "scripts": {
     "dev": "gatsby develop",
