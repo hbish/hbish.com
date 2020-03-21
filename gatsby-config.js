@@ -1,9 +1,11 @@
+const siteConfig = require('./config')
+
 module.exports = {
   siteMetadata: {
-    title: 'Ben Shi',
-    author: 'Ben',
-    description: 'A personal website of Ben Shi',
-    siteUrl: 'https://hbish.com',
+    title: siteConfig.title,
+    author: siteConfig.author,
+    description: siteConfig.description,
+    siteUrl: siteConfig.url,
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
@@ -52,7 +54,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#1ca086`,
         display: `minimal-ui`,
-        icon: `static/favicon.png`,
+        icon: `static/favicon-32x32.png`,
       },
     },
     `gatsby-plugin-offline`,

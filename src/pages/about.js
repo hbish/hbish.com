@@ -25,9 +25,10 @@ class AboutPage extends React.Component {
             <h3>The gist</h3>
             <p>
               I'm currently the Head of Engineering at{' '}
-              <a href="https://www.growsuper.com/">GROW</a>, where we aim to disrupt the superannuation administration
-              industry by providing administrators with better user experience and access to more data through the use of
-              distributed ledger technology and APIs.
+              <a href="https://www.growsuper.com/">GROW</a>, where we aim to
+              disrupt the superannuation administration industry by providing
+              administrators with better user experience and access to more data
+              through the use of distributed ledger technology and APIs.
             </p>
             <p>
               I was previously afilliated with{' '}

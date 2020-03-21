@@ -21,8 +21,8 @@ const Footer = () => (
           textAlign: 'right',
         }}
       >
-        &copy; 2010 - 2018 <Link to="/">Ben Shi</Link> :: v7 :: built with{' '}
-        <a href="https://www.gatsbyjs.org">gatsby</a>
+        &copy; 2010 - 2020 <Link to="/">Ben Shi</Link> :: v7 :: built with{' '}
+        <a href="https://www.gatsbyjs.org">GatsbyJS</a>
         <div>
           <em>site compiled on {data.site.buildTime}</em>
         </div>
