@@ -10,7 +10,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "bulma": "^0.7.5",
     "font-awesome": "^4.7.0",
-    "gatsby": "^2.19.12",
+    "gatsby": "^2.19.43",
     "gatsby-plugin-feed": "^2.3.27",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-offline": "^2.2.10",
@@ -34,6 +34,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "rimraf": "^3.0.2",
     "styled-components": "^3.4.9",
     "typeface-merriweather": "0.0.43",
     "typeface-montserrat": "0.0.43",
@@ -62,12 +63,12 @@
     "url": "git+https://github.com/hbish/hbish.com.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "develop": "npm run clean && gatsby develop",
+    "build": "npm run clean && gatsby build",
+    "clean": "rimraf .cache public",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
