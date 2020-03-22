@@ -1,3 +1,4 @@
 import SectionTitle from './SectionTitle/SectionTitle'
+import Content from './Content/Content'
 
-export { SectionTitle }
+export { SectionTitle, Content }

@@ -6,9 +6,14 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
+  // 404 - Not Found
+  createPage({
+    path: '/404',
+    component: path.resolve('./src/templates/not-found-template.js'),
+  })
+
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
-    const blogListing = path.resolve('./src/templates/blog-listing.js')
+    const blogPost = path.resolve('./src/templates/blog-post-template.js')
 
     resolve(
       graphql(
@@ -66,7 +71,7 @@ const createPages = ({ graphql, actions }) => {
 
           createPage({
             path: `/page/${i + 1}`,
-            component: path.resolve('./src/templates/blog-listing.js'),
+            component: path.resolve('./src/templates/blog-listing-template.js'),
             context: {
               limit: postsPerPage,
               skip: i * postsPerPage,

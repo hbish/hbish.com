@@ -6,18 +6,10 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import styled from 'styled-components'
-import { SectionTitle } from '../components/Utils'
+import { SectionTitle, Content } from '../components/Utils'
 
 class BlogIndex extends React.Component {
   render() {
-    const Content = styled.div`
-      grid-column: 2;
-      box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
-      border-radius: 1rem;
-      padding: 2rem 2rem;
-      overflow: hidden;
-    `
-
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
       this,

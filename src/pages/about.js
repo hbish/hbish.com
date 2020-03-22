@@ -1,22 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import { rhythm } from '../utils/typography'
-import styled from 'styled-components'
-import { SectionTitle } from '../components/Utils'
+import { Content, SectionTitle } from '../components/Utils'
 
 class AboutPage extends React.Component {
   render() {
-    const Content = styled.article`
-      grid-column: 2;
-      box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
-      max-width: 1000px;
-      border-radius: 1rem;
-      padding: 2rem 3rem;
-      background-color: 'white';
-    `
-
     return (
       <Layout location={this.props.location}>
         <Content>
