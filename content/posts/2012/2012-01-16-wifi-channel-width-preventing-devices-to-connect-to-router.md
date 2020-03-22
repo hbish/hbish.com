@@ -13,7 +13,7 @@ tags:
   - wifi
 ---
 
-![Signal Bands Strengths](content/posts/2012/signal.png)
+![Signal Bands Strengths](./signal.png)
 
 I have this annoying problems where I couldn't set my wifi channel to anything apart from 1, 6 and 11. If I set it to anything except the three channels mentioned none of my device is able to connect to it. Both my MBP and iPhone 4 prompted my for my WPA2 pre-shared keys but would complain about a connection timeout, while my android phone and tablet just wouldn't connect at all.
 

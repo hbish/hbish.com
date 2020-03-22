@@ -14,7 +14,7 @@ tags:
   - musashi
 ---
 
-![Musashi - Book Cover](content/posts/2014/musashi.jpg)
+![Musashi - Book Cover](./musashi.jpg)
 
 This masterpiece by Eiji Yoshikawa is easily one of the best (if not the best) book I have ever read. A well-written fictionalisation of the intriguing life of one of the world's greatest swordsman of all time, [Miyamoto Musashi][1]. Now the book itself is BIG, 970 pages to be exact. At this point I should probably point out: 1) It's my first review and 2) I'm pretty bad with my readings, and it took me a good 4 months to finish this book.
 
