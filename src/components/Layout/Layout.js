@@ -10,9 +10,7 @@ import Helmet from 'react-helmet'
 import { useSiteMetadata } from '../../hooks'
 import Header from '../Header'
 
-const Layout = ({ location, children, title, description }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let isIndex = location != null && location.pathname === rootPath
+const Layout = ({ isIndex = false, children, title, description }) => {
   return (
     <div
       style={{

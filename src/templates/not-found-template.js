@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { Content, SectionTitle } from '../components/Utils'
-import '../utils/prismjs-theme.css'
 import { useSiteMetadata } from '../hooks'
 
 const NotFoundTemplate = () => {

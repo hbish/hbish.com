@@ -20,7 +20,7 @@ In the very beginning, I had just a simple static HTML page with a little CSS. T
 
 I did try a few other CMSs but I always find myself coming back to WordPress so I decided to self-host WordPress and wrote my own theme from scratch. I settled on simplicity for v6, only used plugins that I need ([Jetpack](https://wordpress.org/plugins/jetpack/) and [HyperCache](https://wordpress.org/plugins/hyper-cache/)) and kept the design minimal. That worked well for the past 3 years but something else was pulling me down .... WordPress. I needed a server, an application container in Nginx and every 3-4 months I had to upgrade WordPress for security patches. 
 
-![Gatsby Development](gatsby-development.png)
+![Gatsby Development](content/posts/2018/gatsby-development.png)
 
 ### Enter GatsbyJS
 [GatsbyJS](https://www.gatsbyjs.org/) is one of the many static site generators out there. The main goal of these site generators is to remove any server-side technology from the mix and serve out pre-rendered HTML with JavaScript and CSS, basically stuff that your browser is able to understand. This means huge improvement in security (less attack vector and no admin console), reliability (no dependencies like a database), performances (no server rendering) and portability (I can move the website to any host that supports HTML).

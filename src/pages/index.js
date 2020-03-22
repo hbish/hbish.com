@@ -16,9 +16,8 @@ class BlogIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
-
     return (
-      <Layout location={this.props.location}>
+      <Layout isIndex={true} title={siteTitle} description={siteDescription}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
@@ -62,7 +61,7 @@ class BlogIndex extends React.Component {
             )
           })}
           <nav
-            class="pagination is-centered"
+            className="pagination is-centered"
             role="navigation"
             aria-label="pagination"
           >
@@ -90,6 +89,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "post" } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 5
     ) {
@@ -102,6 +102,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            type
             tags
             categories
           }

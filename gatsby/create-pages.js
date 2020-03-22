@@ -13,7 +13,8 @@ const createPages = ({ graphql, actions }) => {
   })
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post-template.js')
+    const postTemplate = path.resolve('./src/templates/blog-post-template.js')
+    const pageTemplate = path.resolve('./src/templates/page-template.js')
 
     resolve(
       graphql(
@@ -30,6 +31,7 @@ const createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    type
                     url
                   }
                 }
@@ -43,9 +45,29 @@ const createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
+        // Get all the markdown files
+        const edges = result.data.allMarkdownRemark.edges
 
+        // Generate pages
+        const pages = _.filter(edges, (val, key, obj) => {
+          return _.get(val, 'node.frontmatter.type') === 'page'
+        })
+        console.log(`pages count: ${pages.length}`)
+        _.each(pages, (post, index) => {
+          createPage({
+            path: post.node.fields.slug,
+            component: pageTemplate,
+            context: {
+              slug: post.node.fields.slug,
+            },
+          })
+        })
+
+        // Generate posts
+        const posts = _.filter(edges, (val, key, obj) => {
+          return _.get(val, 'node.frontmatter.type') === 'post'
+        })
+        console.log(`posts count: ${posts.length}`)
         _.each(posts, (post, index) => {
           const previous =
             index === posts.length - 1 ? null : posts[index + 1].node
@@ -53,7 +75,7 @@ const createPages = ({ graphql, actions }) => {
 
           createPage({
             path: post.node.fields.slug,
-            component: blogPost,
+            component: postTemplate,
             context: {
               slug: post.node.fields.slug,
               previous,

@@ -11,7 +11,7 @@ tags:
   - update
 ---
 
-![Palm Beach, Australia](./palmbeach.jpg)
+![Palm Beach, Australia](content/posts/2013/palmbeach.jpg)
 
 Checking in for first half of 2013.
 
@@ -35,7 +35,7 @@ My new job has given me the opportunity to meeting a lot more people, this also 
 
 This has been something I wanted to do for a long time but never have the time nor the opportunity to execute it. Until now. Last month I invited my dad and my grandmother over from China for a short holiday, they have never left China before and being able to visit Australia is definitely something on their bucket list. I took some times off from work and showed them around the state and also got them on a trip to Cairns (even I have not been to Cairns myself)!
 
-![Appiness](./appiness.jpg)
+![Appiness](content/posts/2013/appiness.jpg)
 
 **I started participating in philanthropy work**
 
