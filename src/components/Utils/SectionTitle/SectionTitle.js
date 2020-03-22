@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { rhythm } from '../utils/typography'
 
 const SectionTitle = styled.div`
   text-transform: uppercase;

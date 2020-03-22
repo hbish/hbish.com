@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
 // Import typefaces
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import profilePic from './profile-pic.png'
-import { scale, rhythm } from '../utils/typography'
+import profilePic from '../profile-pic.png'
+import { rhythm, scale } from '../../utils/typography'
 
 class Bio extends React.Component {
   render() {
@@ -34,9 +33,10 @@ class Bio extends React.Component {
         </div>
         <div>
           <p>
-              I'm <strong>Ben Shi</strong>, a Sydney-based software engineer specialising
-              in micro-services and API development. This is a playground for me to document
-              my learnings and experiences as a technologist.
+            I'm <strong>Ben Shi</strong>, a Sydney-based software engineer
+            specialising in micro-services and API development. This is a
+            playground for me to document my learnings and experiences as a
+            technologist.
           </p>
           <p>
             You can find out a little bit more about me over{' '}

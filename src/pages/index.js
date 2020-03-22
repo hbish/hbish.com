@@ -1,12 +1,11 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
-import Layout from '../components/layout'
-import { rhythm, scale } from '../utils/typography'
-import { SectionTitle } from '../components'
+import Bio from '../components/Bio/Bio'
+import Layout from '../components/Layout'
+import { SectionTitle } from '../components/Utils'
 import styled from 'styled-components'
 
 class BlogIndex extends React.Component {

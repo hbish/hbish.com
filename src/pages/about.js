@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 import styled from 'styled-components'
-import { SectionTitle } from '../components'
+import { SectionTitle } from '../components/Utils'
 
 class AboutPage extends React.Component {
   render() {

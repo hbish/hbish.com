@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import { scale, rhythm } from '../utils/typography'
+import { scale, rhythm } from '../../utils/typography'
 
 const Footer = () => (
   <StaticQuery
