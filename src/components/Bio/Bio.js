@@ -38,17 +38,18 @@ const Bio = () => {
           technologist.
         </p>
         <p>
-          You can find out a little bit more about me over{' '}
-          <Link to="/about/">here</Link>.
+          You can find out a little bit more <Link to="/about/">about</Link> me{' '}
+          and what I <Link to="/uses/">use</Link>.
         </p>
         <span
           style={{
             ...scale(-1 / 6),
           }}
         >
-          <strong>Contact:</strong> [<a href="mailto:ben@hbish.com">email</a> |{' '}
-          <a href="https://twitter.com/hbish/">twitter</a>|{' '}
-          <a href="https://au.linkedin.com/in/benshi/">linkedin</a>]
+          <strong>Contact:</strong> [ <a href="mailto:ben@hbish.com">email</a> |{' '}
+          <a href="https://twitter.com/hbish/">twitter</a> |{' '}
+          <a href="https://au.linkedin.com/in/benshi/">linkedin</a> |{' '}
+          <a href="https://github.com/hbish/">github</a> ]
         </span>
       </div>
     </div>
