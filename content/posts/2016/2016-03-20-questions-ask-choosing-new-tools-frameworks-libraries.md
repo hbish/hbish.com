@@ -16,7 +16,7 @@ tags:
   - tools
 ---
 
-![Searching for alternatives](searching-for-alternatives.jpg)
+![Searching for alternatives](./searching-for-alternatives.jpg)
 
 New tools, frameworks and libraries pop up all the time (especially true in javascript), so how do you assess whether they are the right fit for your project or organisation?
 

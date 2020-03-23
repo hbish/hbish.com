@@ -6,71 +6,32 @@ import Footer from '../Footer'
 
 import 'font-awesome/css/font-awesome.css'
 import '../all.sass'
+import Helmet from 'react-helmet'
+import { useSiteMetadata } from '../../hooks'
+import Header from '../Header'
 
-class Layout extends React.Component {
-  render() {
-    const { location, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+const Layout = ({ isIndex = false, children, title, description }) => {
+  return (
+    <div
+      style={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        maxWidth: rhythm(36),
+        padding: `${rhythm(2)} ${rhythm(3 / 4)}`,
+      }}
+    >
+      <Helmet>
+        <html lang="en" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Hello.
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            marginTop: 0,
-            marginBottom: rhythm(1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Ben Shi
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(36),
-          padding: `${rhythm(2)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children}
+      <Header isIndex={isIndex} />
+      {children}
 
-        <Footer />
-      </div>
-    )
-  }
+      <Footer />
+    </div>
+  )
 }
 
 export default Layout

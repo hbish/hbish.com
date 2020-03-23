@@ -5,28 +5,19 @@ import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio/Bio'
 import Layout from '../components/Layout'
-import { SectionTitle } from '../components/Utils'
+import { SectionTitle, Content } from '../components/Utils'
 import styled from 'styled-components'
 
 class BlogIndex extends React.Component {
   render() {
-    const Content = styled.div`
-      grid-column: 2;
-      box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
-      border-radius: 1rem;
-      padding: 2rem 2rem;
-      overflow: hidden;
-    `
-
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
       this,
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
-
     return (
-      <Layout location={this.props.location}>
+      <Layout isIndex={true} title={siteTitle} description={siteDescription}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
@@ -70,7 +61,7 @@ class BlogIndex extends React.Component {
             )
           })}
           <nav
-            class="pagination is-centered"
+            className="pagination is-centered"
             role="navigation"
             aria-label="pagination"
           >
@@ -98,6 +89,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "post" } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 5
     ) {
@@ -110,6 +102,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            type
             tags
             categories
           }
