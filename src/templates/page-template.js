@@ -14,7 +14,10 @@ const PageTemplate = ({ data }) => {
   const siteDescription = pageBody.excerpt
 
   return (
-    <Layout title={siteTitle} description={siteDescription}>
+    <Layout
+      title={`${frontmatter.title} | ${siteTitle}`}
+      description={siteDescription}
+    >
       <Content>
         <SectionTitle>{frontmatter.title}</SectionTitle>
         <div dangerouslySetInnerHTML={{ __html: pageBody }} />

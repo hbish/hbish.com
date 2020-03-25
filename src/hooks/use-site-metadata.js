@@ -8,6 +8,7 @@ const useSiteMetadata = () => {
           siteMetadata {
             author {
               name
+              photo
             }
             siteUrl
             title

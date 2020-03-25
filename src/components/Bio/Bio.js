@@ -3,11 +3,12 @@ import { Link } from 'gatsby'
 // Import typefaces
 import 'typeface-montserrat'
 import 'typeface-merriweather'
-
-import profilePic from '../profile-pic.png'
 import { rhythm, scale } from '../../utils/typography'
+import { useSiteMetadata } from '../../hooks'
 
 const Bio = () => {
+  const { author } = useSiteMetadata()
+
   return (
     <div
       style={{
@@ -21,7 +22,7 @@ const Bio = () => {
         }}
       >
         <img
-          src={profilePic}
+          src={`${author.photo}`}
           alt={`Ben Shi`}
           style={{
             marginBottom: 0,

@@ -6,5 +6,6 @@ module.exports = {
   description: 'Personal Website of Ben Shi',
   author: {
     name: 'Ben Shi',
+    photo: '/media/profile-pic.png',
   },
 }
