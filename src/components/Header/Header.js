@@ -29,7 +29,7 @@ const Header = ({ isIndex }) => {
     )
   } else {
     return (
-      <h3
+      <h2
         style={{
           marginTop: 0,
           marginBottom: rhythm(1),
@@ -45,7 +45,7 @@ const Header = ({ isIndex }) => {
         >
           Ben Shi
         </Link>
-      </h3>
+      </h2>
     )
   }
 }

@@ -39,8 +39,9 @@ const Bio = () => {
           technologist.
         </p>
         <p>
-          You can find out a little bit more <Link to="/about/">about</Link> me{' '}
-          and what I <Link to="/uses/">use</Link>.
+          You can find out more <Link to="/about/">about</Link> me, my{' '}
+          <Link to="/talks/">talks</Link> and what I{' '}
+          <Link to="/uses/">use</Link>.
         </p>
         <span
           style={{
