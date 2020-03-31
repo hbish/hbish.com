@@ -41,7 +41,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </div>
         </div>
         <div className="columns">
-          <div
+          <article
             className="column"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />

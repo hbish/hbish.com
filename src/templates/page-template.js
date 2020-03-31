@@ -20,7 +20,7 @@ const PageTemplate = ({ data }) => {
     >
       <Content>
         <SectionTitle>{frontmatter.title}</SectionTitle>
-        <div dangerouslySetInnerHTML={{ __html: pageBody }} />
+        <article dangerouslySetInnerHTML={{ __html: pageBody }} />
         <hr
           style={{
             marginTop: rhythm(1),
