@@ -5,7 +5,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 import { Content, SectionTitle } from '../components/Utils'
-import '../utils/prismjs-theme.css'
+import '../../static/css/prismjs-theme.css'
 import { useSiteMetadata } from '../hooks'
 
 const PageTemplate = ({ data }) => {
