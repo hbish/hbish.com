@@ -10,5 +10,6 @@ module.exports = {
   },
   analytics: {
     amplitude: process.env.AMPLITUDE_API_KEY,
+    google: process.env.GOOGLE_API_KEY,
   },
 }
