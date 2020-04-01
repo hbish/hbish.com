@@ -40,8 +40,8 @@ const Bio = () => {
         </p>
         <p>
           You can find out more <Link to="/about/">about</Link> me, my{' '}
-          <Link to="/talks/">talks</Link> and what I{' '}
-          <Link to="/uses/">use</Link>.
+          <Link to="/work/">work</Link>, my <Link to="/talks/">talks</Link> and
+          what I <Link to="/uses/">use</Link>.
         </p>
         <span
           style={{

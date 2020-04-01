@@ -33,10 +33,22 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+              plugins: [
+                {
+                  resolve: `gatsby-remark-autolink-headers`,
+                  options: {
+                    isIconAfterHeader: true,
+                  },
+                },
+              ],
+            },
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {},
           },
-          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
@@ -45,6 +57,38 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // `gatsby-plugin-feed`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage(
+              filter: {
+                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+              }
+            ) {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+          }
+        `,
+        output: '/sitemap.xml',
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => ({
+            url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
+            changefreq: 'daily',
+            priority: 0.7,
+          })),
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

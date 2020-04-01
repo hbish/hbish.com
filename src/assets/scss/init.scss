@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+article {
+  details {
+    summary {
+      font-weight: 600;
+      display: inline list-item;
+    }
+  }
+}
+
+figure {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  img {
+    margin-bottom: 0;
+  }
+}
+
+figcaption {
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+figure.float-left,
+figure.float-right {
+  max-width: 310px;
+  padding: 0 1.625rem;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
