@@ -101,6 +101,13 @@ module.exports = {
         icon: `static/favicon-32x32.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-amplitude-analytics`,
+      options: {
+        apiKey: siteConfig.analytics.amplitude,
+        respectDNT: true,
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,

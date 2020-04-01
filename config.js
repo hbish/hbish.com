@@ -8,4 +8,7 @@ module.exports = {
     name: 'Ben Shi',
     photo: '/media/profile-pic.png',
   },
+  analytics: {
+    amplitude: process.env.AMPLITUDE_API_KEY,
+  },
 }
