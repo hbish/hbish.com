@@ -47,29 +47,20 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           />
         </div>
         <div className="columns">
-          <nav
-            className="pagination is-centered column is-small"
-            role="navigation"
-            aria-label="pagination"
-          >
-            <ul className="pagination-list">
-              {previous && (
-                <li className="pagination-previous">
-                  <Link to={previous.fields.slug} rel="prev">
-                    {'<< ' + previous.frontmatter.title}
-                  </Link>
-                </li>
-              )}
-
-              {next && (
-                <li className="pagination-next">
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title + ' >>'}
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </nav>
+          {'prev: '}
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              {previous.frontmatter.title}
+            </Link>
+          )}
+        </div>
+        <div className="columns">
+          {'next: '}
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title}
+            </Link>
+          )}
         </div>
 
         <hr

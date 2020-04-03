@@ -60,11 +60,7 @@ const BlogIndex = ({ data, pageContext }) => {
           )
         })}
 
-        <nav
-          className="pagination is-centered"
-          role="navigation"
-          aria-label="pagination"
-        >
+        <nav role="navigation" aria-label="pagination">
           {!isFirst && (
             <Link
               to={`${currentPage - 1 === 1 ? '/' : '/page/' + prevPage}`}
@@ -74,20 +70,17 @@ const BlogIndex = ({ data, pageContext }) => {
               {'<<'} Previous Page
             </Link>
           )}
-          <ul className="pagination-list">
-            {Array.from({ length: numPages }, (_, i) => (
-              <li key={`pagination-number${i + 1}`}>
-                <Link
-                  to={`${i === 0 ? '/' : '/page/' + (i + 1)}`}
-                  className={`pagination-link ${
-                    i + 1 === currentPage ? 'is-current' : ''
-                  }`}
-                >
-                  {i + 1}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {Array.from({ length: numPages }, (_, i) => (
+            <Link
+              key={`pagination-number${i + 1}`}
+              to={`${i === 0 ? '/' : '/page/' + (i + 1)}`}
+              className={`pagination-link ${
+                i + 1 === currentPage ? 'is-current' : ''
+              }`}
+            >
+              {i + 1}
+            </Link>
+          ))}
           {!isLast && (
             <Link
               to={'/page/' + nextPage}
@@ -121,7 +114,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 280)
           fields {
             slug
           }

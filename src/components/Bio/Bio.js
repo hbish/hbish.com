@@ -1,8 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
 import { rhythm, scale } from '../../utils/typography'
 import { useSiteMetadata } from '../../hooks'
 

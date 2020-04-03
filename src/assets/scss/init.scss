@@ -10,6 +10,16 @@ article {
   }
 }
 
+nav {
+  a {
+    margin: 0 0.25rem;
+  }
+
+  a.is-current {
+    border-bottom: #103FEA solid 0.1rem;
+  }
+}
+
 figure {
   display: block;
   width: 100%;

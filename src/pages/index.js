@@ -60,16 +60,10 @@ class BlogIndex extends React.Component {
               </div>
             )
           })}
-          <nav
-            className="pagination is-centered"
-            role="navigation"
-            aria-label="pagination"
-          >
-            <ul className="pagination-list">
-              <Link to="/page/2" rel="prev" className="pagination-previous">
-                {'<<'} Older Posts
-              </Link>
-            </ul>
+          <nav role="navigation" aria-label="pagination">
+            <Link to="/page/2" rel="prev" className="pagination-previous">
+              {'<<'} Older Posts
+            </Link>
           </nav>
         </Content>
       </Layout>
@@ -95,7 +89,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 280)
           fields {
             slug
           }
