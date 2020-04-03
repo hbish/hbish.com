@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link, StaticQuery } from 'gatsby'
 import { rhythm, scale } from '../../utils/typography'
 import { useSiteMetadata } from '../../hooks'
+import Img from 'gatsby-image'
 
-const Bio = () => {
+const Bio = ({ data }) => {
   const { author } = useSiteMetadata()
 
   return (
@@ -18,14 +19,29 @@ const Bio = () => {
           marginRight: rhythm(1),
         }}
       >
-        <img
-          src={`${author.photo}`}
-          alt={`Ben Shi`}
-          style={{
-            marginBottom: 0,
-            width: rhythm(10),
-            borderRadius: rhythm(1),
-          }}
+        <StaticQuery
+          query={graphql`
+            query {
+              profilePic: file(relativePath: { eq: "profile-pic.png" }) {
+                childImageSharp {
+                  fluid(maxWidth: 125) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+          `}
+          render={data => (
+            <Img
+              fluid={data['profilePic'].childImageSharp.fluid}
+              alt={`Ben Shi`}
+              style={{
+                marginBottom: 0,
+                width: rhythm(6),
+                borderRadius: rhythm(1),
+              }}
+            />
+          )}
         />
       </div>
       <div>
