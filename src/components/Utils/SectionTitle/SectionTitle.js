@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const SectionTitle = styled.div`
   text-transform: uppercase;
-  font-weight: bold;
   text-align: center;
   color: #191919;
   position: relative;

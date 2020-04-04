@@ -116,6 +116,18 @@ module.exports = {
         theme_color: `#103FEA`,
         display: `minimal-ui`,
         icon: `static/favicon-32x32.png`,
+        icons: [
+          {
+            src: `/static/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/static/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     {

@@ -31,7 +31,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           className="row"
           style={{
             fontSize: rhythm(3 / 5),
-            fontWeight: 700,
             marginBottom: '1rem',
           }}
         >

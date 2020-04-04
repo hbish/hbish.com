@@ -3,6 +3,9 @@ import fairyGatesTheme from 'typography-theme-fairy-gates'
 import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 fairyGatesTheme.baseFontSize = '18px'
+fairyGatesTheme.googleFonts = []
+fairyGatesTheme.headerFontFamily = ['Proza Libre', 'sans-serif']
+fairyGatesTheme.bodyFontFamily = ['Open Sans', 'serif']
 fairyGatesTheme.overrideThemeStyles = ({ rhythm }, options) => {
   const linkColor = '#103FEA'
 
