@@ -131,13 +131,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-amplitude-analytics`,
-      options: {
-        apiKey: siteConfig.analytics.amplitude,
-        respectDNT: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: siteConfig.analytics.google,
