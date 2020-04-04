@@ -8,25 +8,24 @@ const Footer = () => (
       query FooterQuery {
         site {
           buildTime(formatString: "DD/MM/YYYY")
+          year: buildTime(formatString: "YYYY")
         }
       }
     `}
     render={data => (
       <footer
         style={{
-          ...scale(-1 / 3),
-          display: 'block',
-          marginTop: rhythm(1),
-          marginBottom: rhythm(2),
+          ...scale(-3 / 4),
+          marginTop: rhythm(0.5),
           textAlign: 'right',
+          lineHeight: rhythm(0.75),
         }}
       >
-        &copy; 2010 - 2020 <Link to="/">Ben Shi</Link> ::{' '}
+        &copy; 2010 - {data.site.year} <Link to="/">Ben Shi</Link> ::{' '}
         <Link to="/versions/">v7</Link> :: built with{' '}
         <a href="https://www.gatsbyjs.org">GatsbyJS</a>
-        <div>
-          <em>site compiled on {data.site.buildTime}</em>
-        </div>
+        <br />
+        site compiled on {data.site.buildTime}
       </footer>
     )}
   />

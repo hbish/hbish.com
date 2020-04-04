@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 import { Content, SectionTitle } from '../components/Utils'
-import '../../static/css/prismjs-theme.css'
 import { useSiteMetadata } from '../hooks'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const { title: siteTitle } = useSiteMetadata()
   const post = data.markdownRemark
   const { previous, next } = pageContext
+
+  useEffect(() => {
+    const deckdeckgoHighlightCodeLoader = require('@deckdeckgo/highlight-code/dist/loader')
+    deckdeckgoHighlightCodeLoader.defineCustomElements(window).catch(e => {
+      console.log(e)
+    })
+  })
 
   return (
     <Layout
@@ -22,17 +28,18 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <SectionTitle>Blog Post</SectionTitle>
         <h1>{post.frontmatter.title}</h1>
         <div
-          className="columns"
+          className="row"
           style={{
             fontSize: rhythm(3 / 5),
             fontWeight: 700,
+            marginBottom: '1rem',
           }}
         >
-          <div className="column is-half">
+          <div className="column">
             Posted Under: <em>{post.frontmatter.categories}</em>
           </div>
           <div
-            className="column is-half"
+            className="column"
             style={{
               textAlign: 'right',
             }}
@@ -40,27 +47,33 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             {post.frontmatter.date}
           </div>
         </div>
-        <div className="columns">
+        <div className="row">
           <article
             className="column"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
-        <div className="columns">
-          {'prev: '}
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              {previous.frontmatter.title}
-            </Link>
-          )}
-        </div>
-        <div className="columns">
-          {'next: '}
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title}
-            </Link>
-          )}
+
+        <div className="row" style={{ marginTop: '1rem' }}>
+          <div className={'column'}>
+            {previous && (
+              <span>
+                <strong>{'prev: '}</strong>
+                <Link to={previous.fields.slug} rel="prev">
+                  {previous.frontmatter.title}
+                </Link>
+              </span>
+            )}
+            <br />
+            {next && (
+              <span>
+                <strong>{'next: '}</strong>
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title}
+                </Link>
+              </span>
+            )}
+          </div>
         </div>
 
         <hr
@@ -70,7 +83,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           }}
         />
 
-        <div className="columns">
+        <div className="row">
           <div
             className="column is-full"
             style={{

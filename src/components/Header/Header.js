@@ -6,48 +6,47 @@ import { useSiteMetadata } from '../../hooks'
 const Header = ({ isIndex }) => {
   const { author, url } = useSiteMetadata()
 
-  if (isIndex) {
-    return (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
+  return (
+    <div style={{ marginBottom: rhythm(0.5) }}>
+      {(isIndex && (
+        <h1
           style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
-            color: 'inherit',
+            ...scale(1.5),
+            marginBottom: rhythm(0.5),
           }}
-          to={'/'}
         >
-          Hello.
+          <Link
+            style={{
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+            to={'/'}
+          >
+            Hello.
+          </Link>
+        </h1>
+      )) || (
+        <h2>
+          <Link
+            style={{
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+            to={'/'}
+          >
+            Ben Shi
+          </Link>
+        </h2>
+      )}
+      {!isIndex && (
+        <Link to={'/'}>
+          <small>{'<<'} back home</small>
         </Link>
-      </h1>
-    )
-  } else {
-    return (
-      <h2
-        style={{
-          marginTop: 0,
-          marginBottom: rhythm(1),
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
-            color: 'inherit',
-          }}
-          to={'/'}
-        >
-          Ben Shi
-        </Link>
-      </h2>
-    )
-  }
+      )}
+    </div>
+  )
 }
 
 export default Header
