@@ -49,12 +49,15 @@ module.exports = {
                     isIconAfterHeader: true,
                   },
                 },
+                {
+                  resolve: `gatsby-remark-highlight-code`,
+                  options: {
+                    terminal: 'carbon',
+                    lineNumbers: true,
+                  },
+                },
               ],
             },
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {},
           },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',

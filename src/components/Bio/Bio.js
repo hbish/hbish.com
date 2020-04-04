@@ -9,16 +9,12 @@ const Bio = ({ data }) => {
 
   return (
     <div
+      className="row"
       style={{
-        display: 'flex',
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(0.5),
       }}
     >
-      <div
-        style={{
-          marginRight: rhythm(1),
-        }}
-      >
+      <div className="column column-20">
         <StaticQuery
           query={graphql`
             query {
@@ -36,15 +32,13 @@ const Bio = ({ data }) => {
               fluid={data['profilePic'].childImageSharp.fluid}
               alt={`Ben Shi`}
               style={{
-                marginBottom: 0,
-                width: rhythm(6),
                 borderRadius: rhythm(1),
               }}
             />
           )}
         />
       </div>
-      <div>
+      <div className="column">
         <p>
           I'm <strong>Ben Shi</strong>, a Sydney-based software engineer
           specialising in micro-services and API development. This is a
