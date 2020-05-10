@@ -12,9 +12,23 @@ url: /work/
 
 _I'm still in the process of consolidating my work in the one place, this page will be updated regularly_
 
+#### smex [[github](https://github.com/hbish/smex)]
+
+<div style="display: inline-block">
+<figure class="float-right" >
+    <a href="https://asciinema.org/a/327587">
+	    <img src="https://asciinema.org/a/327587.svg" alt="hbish/smex demo">
+	    <figcaption>github.com/hbish/smex demo</figcaption>
+	</a>
+</figure>
+
+A blazing fast cli application to process/extract/convert sitemaps, written in golang. Cross compiled to mac, linux & windows.
+
+</div>
+
 #### gatsby-source-mastodon plugin [[npm](https://www.npmjs.com/package/gatsby-source-mastodon) | [github](https://github.com/hbish/gatsby-source-mastodon)]
 
-Gatsby plugin for sourcing user toots from any Mastodon network. 
+Gatsby plugin for sourcing user toots from any Mastodon network.
 
 #### awesome-performance [[github](https://github.com/hbish/awesome-performance)]
 
@@ -22,7 +36,7 @@ A collection of videos, talks and tools about all things performance engineering
  tandem with my performance testing [talk](https://dddsydney2019.hbish.com/#slide=1) at DDDSydney.
 
 #### hbish.com [[versions](/versions)]
-    
+
 I've went through multiple iterations of the website as my personal design philosphy changed over time. I've created
  a dedicated page to take you through the different iterations.
 
@@ -68,7 +82,7 @@ A new iPaaS implementation built for Velocity Frequent Flyers to integrate with 
  user profiles, frequent flyer points and other backing services. Microservices architecture with Apigee as API gatway
   and keycloak as authentication and authorization service ([find out more](https://experience.velocityfrequentflyer.com/)).
 
-**Technology** - Java, Sprint Boot, Apigee, KeyCloak, AWS 
+**Technology** - Java, Sprint Boot, Apigee, KeyCloak, AWS
 
 </details>
 
@@ -81,4 +95,4 @@ A new marketplace to bring all of Suncorp products and its child brands together
 
 </details>
 
-   
+
