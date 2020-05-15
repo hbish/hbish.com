@@ -23,8 +23,6 @@ class BlogIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        <Bio />
-
         <Content>
           <SectionTitle>Recent Posts</SectionTitle>
           {posts.map(({ node }) => {

@@ -1,20 +1,14 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import { scale, rhythm } from '../../utils/typography'
 import { useSiteMetadata } from '../../hooks'
 
 const Header = ({ isIndex }) => {
   const { author, url } = useSiteMetadata()
 
   return (
-    <div style={{ marginBottom: rhythm(0.5) }}>
+    <div>
       {(isIndex && (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(0.5),
-          }}
-        >
+        <h1 style={{}}>
           <Link
             style={{
               boxShadow: 'none',

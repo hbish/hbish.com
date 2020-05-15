@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import { scale, rhythm } from '../../utils/typography'
 
 const Footer = () => (
   <StaticQuery
@@ -15,10 +14,7 @@ const Footer = () => (
     render={data => (
       <footer
         style={{
-          ...scale(-1 / 2),
-          marginTop: rhythm(0.5),
           textAlign: 'right',
-          lineHeight: rhythm(0.75),
         }}
       >
         &copy; 2010 - {data.site.year} <Link to="/">Ben Shi</Link> ::{' '}

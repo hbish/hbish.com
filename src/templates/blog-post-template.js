@@ -3,7 +3,6 @@ import { graphql, Link } from 'gatsby'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import { rhythm, scale } from '../utils/typography'
 import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
 
@@ -30,7 +29,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <div
           className="row"
           style={{
-            fontSize: rhythm(3 / 5),
             marginBottom: '1rem',
           }}
         >
@@ -75,20 +73,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </div>
         </div>
 
-        <hr
-          style={{
-            marginTop: rhythm(1),
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr style={{}} />
 
         <div className="row">
-          <div
-            className="column is-full"
-            style={{
-              ...scale(-1 / 6),
-            }}
-          >
+          <div className="column is-full">
             <Bio />
           </div>
         </div>
