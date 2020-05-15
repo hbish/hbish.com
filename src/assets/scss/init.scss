@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+$color-initial: #fff !default;
+$color-primary: #103FEA !default;
+$color-secondary: #606c76 !default;
+$color-tertiary: #f4f5f6 !default;
+$color-quaternary: #d1d1d1 !default;
+$color-quinary: #e1e1e1 !default;
+
+@import '~milligram-scss/src/milligram.scss';
+
+@import "Sidebar";
+@import "Footer";
+
+.container {
+  margin-top: 5rem;
+  background-color: $color-initial;
+}
 
 article {
   details {

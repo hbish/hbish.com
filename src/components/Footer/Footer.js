@@ -12,11 +12,7 @@ const Footer = () => (
       }
     `}
     render={data => (
-      <footer
-        style={{
-          textAlign: 'right',
-        }}
-      >
+      <footer>
         &copy; 2010 - {data.site.year} <Link to="/">Ben Shi</Link> ::{' '}
         <Link to="/versions/">v7</Link> :: built with{' '}
         <a href="https://www.gatsbyjs.org">GatsbyJS</a>

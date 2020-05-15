@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Bio from '../components/Bio'
+import Sidebar from '../components/Sidebar'
 import Layout from '../components/Layout'
 import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
@@ -70,14 +70,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 </Link>
               </span>
             )}
-          </div>
-        </div>
-
-        <hr style={{}} />
-
-        <div className="row">
-          <div className="column is-full">
-            <Bio />
           </div>
         </div>
       </Content>

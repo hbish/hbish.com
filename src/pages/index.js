@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio/Bio'
+import Sidebar from '../components/Sidebar/Sidebar'
 import Layout from '../components/Layout'
 import { SectionTitle, Content } from '../components/Utils'
 import styled from 'styled-components'

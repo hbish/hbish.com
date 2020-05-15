@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Bio from '../components/Bio'
+import Sidebar from '../components/Sidebar'
 import Layout from '../components/Layout'
 import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
@@ -19,13 +19,6 @@ const PageTemplate = ({ data }) => {
       <Content>
         <SectionTitle>{frontmatter.title}</SectionTitle>
         <article dangerouslySetInnerHTML={{ __html: pageBody }} />
-        <hr />
-
-        <div className="row">
-          <div className="column is-full">
-            <Bio />
-          </div>
-        </div>
       </Content>
     </Layout>
   )

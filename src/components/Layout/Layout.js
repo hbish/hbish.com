@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 import { useSiteMetadata } from '../../hooks'
 import Header from '../Header'
 import { withPrefix } from 'gatsby-link'
-import Bio from '../Bio'
+import Sidebar from '../Sidebar'
 
 const Layout = ({
   isIndex = false,
@@ -21,7 +21,7 @@ const Layout = ({
   const metaImageUrl = siteUrl + withPrefix(metaImage)
 
   return (
-    <div className={'container'}>
+    <div className="container">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -35,12 +35,11 @@ const Layout = ({
       </Helmet>
 
       {/*<Header isIndex={isIndex} />*/}
-      <div className={'row'}>
-        <div className={'column column-20'}>
-          <Bio />
-          <Footer />
+      <div className="row">
+        <div className="column column-20">
+          <Sidebar />
         </div>
-        <div className={'column column-80'}>{children}</div>
+        <div className="column column-80">{children}</div>
       </div>
     </div>
   )

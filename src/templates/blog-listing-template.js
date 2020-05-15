@@ -3,7 +3,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 
-import Bio from '../components/Bio'
+import Sidebar from '../components/Sidebar'
 import Layout from '../components/Layout'
 import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
@@ -19,8 +19,6 @@ const BlogIndex = ({ data, pageContext }) => {
 
   return (
     <Layout isIndex={true} title={title} description={description}>
-      <Bio />
-
       <Content>
         <SectionTitle>
           Page {currentPage} of {numPages}
