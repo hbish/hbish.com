@@ -31,7 +31,7 @@ const Footer = () => (
         </ThemeToggler>
         &copy; 2010 - {data.site.year} <Link to="/"> - Ben Shi</Link>
         <br />
-        :: <Link to="/versions/">v8</Link> :: built on {data.site.buildTime}
+        :: <Link to="/versions/">v8</Link> built on {data.site.buildTime}
         <br />
       </footer>
     )}

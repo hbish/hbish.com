@@ -40,23 +40,16 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-transformer-remark`,
+            resolve: `gatsby-remark-autolink-headers`,
             options: {
-              plugins: [
-                {
-                  resolve: `gatsby-remark-autolink-headers`,
-                  options: {
-                    isIconAfterHeader: true,
-                  },
-                },
-                {
-                  resolve: `gatsby-remark-highlight-code`,
-                  options: {
-                    terminal: 'carbon',
-                    lineNumbers: true,
-                  },
-                },
-              ],
+              isIconAfterHeader: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              lineNumbers: true,
             },
           },
           'gatsby-remark-copy-linked-files',

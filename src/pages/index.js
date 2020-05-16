@@ -13,6 +13,18 @@ class BlogIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const years = new Map()
+    posts.forEach(({ node }) => {
+      if (years.get(get(node, 'frontmatter.year'))) {
+        years.set(
+          get(node, 'frontmatter.year'),
+          years.get(get(node, 'frontmatter.year')).concat(node)
+        )
+      } else {
+        years.set(get(node, 'frontmatter.year'), [node])
+      }
+    })
+
     return (
       <Layout isIndex={true} title={siteTitle} description={siteDescription}>
         <Helmet
@@ -21,39 +33,21 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <div className={'content'}>
-          <div className={'section-title'}>Recent Posts</div>
-          {posts.map(({ node }) => {
-            const title = get(node, 'frontmatter.title') || node.fields.slug
-            return (
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-                key={node.fields.slug}
-              >
-                <div>
+          <div className={'section-title'}>Posts</div>
+          {Array.from(years).map(([year, nodes]) => {
+            return nodes.map((node, index) => {
+              const title = get(node, 'frontmatter.title') || node.fields.slug
+              return (
+                <div key={node.fields.slug}>
+                  {index === 0 && <h3>{year}</h3>}
                   <div>
-                    <small>{node.frontmatter.date}</small>
-                    <div
-                      style={{
-                        float: 'right',
-                      }}
-                    >
-                      <small>
-                        <strong>{node.frontmatter.categories}</strong>
-                      </small>
-                    </div>
+                    <strong>{node.frontmatter.date}</strong> ::{' '}
+                    <Link to={node.fields.slug}>{title}</Link>
+                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                   </div>
                 </div>
-                <div>
-                  <h3>
-                    <Link to={node.fields.slug}>{title}</Link>{' '}
-                  </h3>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                </div>
-              </div>
-            )
+              )
+            })
           })}
         </div>
       </Layout>
@@ -83,7 +77,8 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            year: date(formatString: "YYYY")
+            date(formatString: "MMM DD")
             title
             type
             tags

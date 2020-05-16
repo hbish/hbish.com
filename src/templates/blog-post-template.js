@@ -23,25 +23,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     >
       <div className={'content'}>
         <div className={'section-title'}>Blog Post</div>
+        <div>{post.frontmatter.date}</div>
         <h1>{post.frontmatter.title}</h1>
-        <div
-          className="row"
-          style={{
-            marginBottom: '1rem',
-          }}
-        >
-          <div className="column">
-            Posted Under: <em>{post.frontmatter.categories}</em>
-          </div>
-          <div
-            className="column"
-            style={{
-              textAlign: 'right',
-            }}
-          >
-            {post.frontmatter.date}
-          </div>
-        </div>
         <div className="row">
           <article
             className="column"
