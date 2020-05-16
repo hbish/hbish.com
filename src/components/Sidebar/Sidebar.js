@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql, Link, StaticQuery } from 'gatsby'
-import { useSiteMetadata } from '../../hooks'
 import Img from 'gatsby-image'
-import Footer from '../Footer'
 import IcEmail from '../../assets/svg/mail.inline.svg'
 import IcTwitter from '../../assets/svg/twitter.inline.svg'
 import IcLinkedin from '../../assets/svg/linkedin.inline.svg'
 import IcGithub from '../../assets/svg/github.inline.svg'
 
 const Sidebar = ({ data }) => {
-  const { author } = useSiteMetadata()
+  let websiteTheme
+
+  if (typeof window !== `undefined`) {
+    websiteTheme = window.__theme
+  }
+
+  const [theme, setTheme] = useState(websiteTheme)
+
+  useEffect(() => {
+    setTheme(window.__theme)
+    window.__onThemeChange = () => {
+      setTheme(window.__theme)
+    }
+  }, [])
 
   return (
     <div className="sidebar center">
@@ -30,7 +41,12 @@ const Sidebar = ({ data }) => {
             <Img
               fluid={data['profilePic'].childImageSharp.fluid}
               alt={`Ben Shi`}
-              style={{ borderRadius: '10rem', marginBottom: '3rem' }}
+              style={{
+                borderRadius: '10rem',
+                marginBottom: '3rem',
+                maxWidth: '20rem',
+                margin: '0 auto',
+              }}
             />
           </Link>
         )}
@@ -77,8 +93,18 @@ const Sidebar = ({ data }) => {
           <IcGithub aria-labelledby={'title'} />
         </a>
       </div>
+      <div>
+        <label htmlFor={'themeId'}>theme</label>
+        <select
+          id="themeId"
+          value={theme}
+          onChange={e => window.__setPreferredTheme(e.target.value)}
+        >
+          <option value="light">light</option>
+          <option value="dark">dark</option>
+        </select>
+      </div>
       <hr />
-      <Footer />
     </div>
   )
 }

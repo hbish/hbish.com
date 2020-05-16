@@ -75,7 +75,7 @@ h6 {
 }
 
 .content {
-  margin: 0 5rem;
+  padding: 0 5rem;
 }
 
 .section-title {
@@ -104,12 +104,6 @@ article {
       font-weight: 500;
       display: inline list-item;
     }
-  }
-}
-
-nav {
-  ul {
-    list-style: none;
   }
 }
 
@@ -148,7 +142,17 @@ figcaption {
 .waterfall {
   background-image: linear-gradient(to bottom, var(--color-primary) 0%, transparent 100%);
   overflow: hidden;
-  width: 15px;
-  min-width: 15px;
+  width: 10px;
+  min-width: 10px;
   height: 1100px;
+}
+
+@media (min-width: 200px) and (max-width:650px) {
+  .row .column[class*=" column-"] {
+    max-width: 100%;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
 }

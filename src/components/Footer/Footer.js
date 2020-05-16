@@ -1,21 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
 const Footer = () => {
-  let websiteTheme
-  if (typeof window !== `undefined`) {
-    websiteTheme = window.__theme
-  }
-
-  const [theme, setTheme] = useState(websiteTheme)
-
-  useEffect(() => {
-    setTheme(window.__theme)
-    window.__onThemeChange = () => {
-      setTheme(window.__theme)
-    }
-  }, [])
-
   return (
     <StaticQuery
       query={graphql`
@@ -28,17 +14,6 @@ const Footer = () => {
       `}
       render={data => (
         <footer className={'center'}>
-          <div>
-            <label htmlFor={'themeId'}>theme</label>
-            <select
-              id="themeId"
-              value={theme}
-              onChange={e => window.__setPreferredTheme(e.target.value)}
-            >
-              <option value="light">light</option>
-              <option value="dark">dark</option>
-            </select>
-          </div>
           &copy; 2010 - {data.site.year} <Link to="/"> - Ben Shi</Link>
           <br />
           :: <Link to="/versions/">v8</Link> compiled {data.site.buildTime} ::
