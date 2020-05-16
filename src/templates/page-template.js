@@ -1,9 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Sidebar from '../components/Sidebar'
 import Layout from '../components/Layout'
-import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
 
 const PageTemplate = ({ data }) => {
@@ -16,10 +14,10 @@ const PageTemplate = ({ data }) => {
       title={`${frontmatter.title} | ${siteTitle}`}
       description={siteDescription}
     >
-      <Content>
-        <SectionTitle>{frontmatter.title}</SectionTitle>
+      <div className={'content'}>
+        <div className={'section-title'}>{frontmatter.title}</div>
         <article dangerouslySetInnerHTML={{ __html: pageBody }} />
-      </Content>
+      </div>
     </Layout>
   )
 }

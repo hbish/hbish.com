@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Sidebar from '../components/Sidebar'
 import Layout from '../components/Layout'
-import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -23,8 +21,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       title={`${post.frontmatter.title} | ${siteTitle}`}
       description={post.excerpt}
     >
-      <Content>
-        <SectionTitle>Blog Post</SectionTitle>
+      <div className={'content'}>
+        <div className={'section-title'}>Blog Post</div>
         <h1>{post.frontmatter.title}</h1>
         <div
           className="row"
@@ -72,7 +70,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             )}
           </div>
         </div>
-      </Content>
+      </div>
     </Layout>
   )
 }

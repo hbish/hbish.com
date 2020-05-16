@@ -37,7 +37,7 @@ const Sidebar = ({ data }) => {
       />
       <hr />
       <p>
-        I'm a software engineer specialising in microservices and API
+        👋 I'm a software engineer specialising in microservices and API
         development. This is a playground for me to document my learnings and
         experiences.
       </p>

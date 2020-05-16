@@ -3,9 +3,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 
-import Sidebar from '../components/Sidebar'
 import Layout from '../components/Layout'
-import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
 
 const BlogIndex = ({ data, pageContext }) => {
@@ -19,10 +17,10 @@ const BlogIndex = ({ data, pageContext }) => {
 
   return (
     <Layout isIndex={true} title={title} description={description}>
-      <Content>
-        <SectionTitle>
+      <div className={'content'}>
+        <div className={'section-title'}>
           Page {currentPage} of {numPages}
-        </SectionTitle>
+        </div>
 
         {edges.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
@@ -89,7 +87,7 @@ const BlogIndex = ({ data, pageContext }) => {
             </Link>
           )}
         </nav>
-      </Content>
+      </div>
     </Layout>
   )
 }

@@ -3,10 +3,7 @@ import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Sidebar from '../components/Sidebar/Sidebar'
 import Layout from '../components/Layout'
-import { SectionTitle, Content } from '../components/Utils'
-import styled from 'styled-components'
 
 class BlogIndex extends React.Component {
   render() {
@@ -23,8 +20,8 @@ class BlogIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        <Content>
-          <SectionTitle>Recent Posts</SectionTitle>
+        <div className={'content'}>
+          <div className={'section-title'}>Recent Posts</div>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
@@ -63,7 +60,7 @@ class BlogIndex extends React.Component {
               {'<<'} Older Posts
             </Link>
           </nav>
-        </Content>
+        </div>
       </Layout>
     )
   }
