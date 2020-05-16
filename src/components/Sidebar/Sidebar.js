@@ -54,6 +54,9 @@ const Sidebar = ({ data }) => {
         <li>
           <Link to="/uses/">/uses</Link>
         </li>
+        <li>
+          <Link to="/notes/">/notes</Link>
+        </li>
       </ul>
       <p>
         <a href="mailto:ben@hbish.com">

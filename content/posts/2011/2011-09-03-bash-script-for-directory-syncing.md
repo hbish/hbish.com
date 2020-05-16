@@ -1,7 +1,7 @@
 ---
 title: Bash Script for Directory Syncing
 author: ben
-type: post
+type: note
 date: 2011-09-03T07:01:15+00:00
 url: /bash-script-for-directory-syncing/
 categories:

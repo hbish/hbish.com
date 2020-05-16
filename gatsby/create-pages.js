@@ -84,23 +84,30 @@ const createPages = ({ graphql, actions }) => {
           })
         })
 
-        // Create blog post lists
-        const postsPerPage = 5
-        const numPages = Math.ceil(posts.length / postsPerPage)
-
-        _.times(numPages, i => {
-          if (i === 0) return
+        // Generate notes
+        const notes = _.filter(edges, (val, key, obj) => {
+          return _.get(val, 'node.frontmatter.type') === 'note'
+        })
+        console.log(`notes count: ${notes.length}`)
+        _.each(notes, (post, index) => {
+          const previous =
+            index === notes.length - 1 ? null : notes[index + 1].node
+          const next = index === 0 ? null : notes[index - 1].node
 
           createPage({
-            path: `/page/${i + 1}`,
-            component: path.resolve('./src/templates/blog-listing-template.js'),
+            path: post.node.fields.slug,
+            component: postTemplate,
             context: {
-              limit: postsPerPage,
-              skip: i * postsPerPage,
-              numPages,
-              currentPage: i + 1,
+              slug: post.node.fields.slug,
+              previous,
+              next,
             },
           })
+        })
+
+        createPage({
+          path: `/notes`,
+          component: path.resolve('./src/templates/note-listing-template.js'),
         })
       })
     )

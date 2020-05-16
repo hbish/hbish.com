@@ -55,11 +55,6 @@ class BlogIndex extends React.Component {
               </div>
             )
           })}
-          <nav role="navigation" aria-label="pagination">
-            <Link to="/page/2" rel="prev" className="pagination-previous">
-              {'<<'} Older Posts
-            </Link>
-          </nav>
         </div>
       </Layout>
     )
@@ -80,7 +75,6 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "post" } } }
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 5
     ) {
       edges {
         node {

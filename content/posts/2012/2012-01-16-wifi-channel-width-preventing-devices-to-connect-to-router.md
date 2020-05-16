@@ -1,7 +1,7 @@
 ---
 title: WIFI channel width preventing devices to connect to router
 author: ben
-type: post
+type: note
 date: 2012-01-16T07:40:57+00:00
 url: /wifi-channel-width-preventing-devices-to-connect-to-router/
 categories:

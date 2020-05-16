@@ -1,7 +1,7 @@
 ---
 title: Customising prompt in unix shell
 author: ben
-type: post
+type: note
 date: 2011-11-20T07:11:35+00:00
 url: /customising-prompt-in-unix-shell/
 categories:

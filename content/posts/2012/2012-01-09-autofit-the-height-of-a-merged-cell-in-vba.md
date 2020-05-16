@@ -1,7 +1,7 @@
 ---
 title: Autofit the height of a merged cell in VBA
 author: ben
-type: post
+type: note
 date: 2012-01-09T07:39:45+00:00
 url: /autofit-the-height-of-a-merged-cell-in-vba/
 categories:
