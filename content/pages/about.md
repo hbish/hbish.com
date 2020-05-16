@@ -12,17 +12,15 @@ I previously worked for [Versent](https://versent.com.au), [J.P Morgan](https://
 
 🧐 I love solving complex issues.
 
-🧪 I value software quality and I take testing seriously.
-
-⚡️ I get my energy through building great teams.
+🧪 I value software quality, and I take testing seriously.
 
 👨🏻‍🏫 I believe in taking the time to teach and mentor.
 
 ☕️ I'm a coffee lover, will need at least 2 a day to keep me going.
 
-🥃 I love my gin & tonic.
+🍔 I love a messy burger and a good gin & tonic.
 
-⛰ I enjoy the outdoors.
+⛰ I enjoy the outdoors (but I don't go out enough).
 
 #### Links of interest
 

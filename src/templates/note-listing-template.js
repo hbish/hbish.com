@@ -16,7 +16,7 @@ const BlogIndex = ({ data, pageContext }) => {
   const nextPage = (currentPage + 1).toString()
 
   return (
-    <Layout isIndex={true} title={title} description={description}>
+    <Layout title={title} description={description}>
       <div className={'content'}>
         <div className={'section-title'}>Notes</div>
         <p>

@@ -25,33 +25,26 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <div className={'section-title'}>Blog Post</div>
         <div>{post.frontmatter.date}</div>
         <h1>{post.frontmatter.title}</h1>
-        <div className="row">
-          <article
-            className="column"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-        </div>
+        <article dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <div className="row" style={{ marginTop: '1rem' }}>
-          <div className={'column'}>
-            {previous && (
-              <span>
-                <strong>{'prev: '}</strong>
-                <Link to={previous.fields.slug} rel="prev">
-                  {previous.frontmatter.title}
-                </Link>
-              </span>
-            )}
-            <br />
-            {next && (
-              <span>
-                <strong>{'next: '}</strong>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title}
-                </Link>
-              </span>
-            )}
-          </div>
+        <div style={{ marginTop: '1rem' }}>
+          {previous && (
+            <span>
+              <strong>{'prev: '}</strong>
+              <Link to={previous.fields.slug} rel="prev">
+                {previous.frontmatter.title}
+              </Link>
+            </span>
+          )}
+          <br />
+          {next && (
+            <span>
+              <strong>{'next: '}</strong>
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title}
+              </Link>
+            </span>
+          )}
         </div>
       </div>
     </Layout>

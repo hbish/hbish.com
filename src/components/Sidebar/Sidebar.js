@@ -12,7 +12,7 @@ const Sidebar = ({ data }) => {
   const { author } = useSiteMetadata()
 
   return (
-    <div className="sidebar">
+    <div className="sidebar center">
       <StaticQuery
         query={graphql`
           query {
@@ -41,24 +41,26 @@ const Sidebar = ({ data }) => {
         development. This is a playground for me to document my learnings and
         experiences.
       </p>
-      <ul>
-        <li>
-          <Link to="/about/">/about</Link>
-        </li>
-        <li>
-          <Link to="/work/">/work</Link>
-        </li>
-        <li>
-          <Link to="/talks/">/talks</Link>
-        </li>
-        <li>
-          <Link to="/uses/">/uses</Link>
-        </li>
-        <li>
-          <Link to="/notes/">/notes</Link>
-        </li>
-      </ul>
-      <p>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/about/">/about</Link>
+          </li>
+          <li>
+            <Link to="/work/">/work</Link>
+          </li>
+          <li>
+            <Link to="/talks/">/talks</Link>
+          </li>
+          <li>
+            <Link to="/uses/">/uses</Link>
+          </li>
+          <li>
+            <Link to="/notes/">/notes</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className={'social'}>
         <a href="mailto:ben@hbish.com">
           <IcEmail />
         </a>{' '}
@@ -71,7 +73,8 @@ const Sidebar = ({ data }) => {
         <a href="https://github.com/hbish/">
           <IcGithub />
         </a>
-      </p>
+      </div>
+      <hr />
       <Footer />
     </div>
   )

@@ -13,16 +13,12 @@ const Footer = () => (
       }
     `}
     render={data => (
-      <footer>
+      <footer className={'center'}>
         <ThemeToggler>
           {({ theme, toggleTheme }) => (
             <div>
               <label>theme</label>
-              <select
-                className={'select-small'}
-                id="themeId"
-                onChange={e => toggleTheme(e.target.value)}
-              >
+              <select id="themeId" onChange={e => toggleTheme(e.target.value)}>
                 <option value="light">light</option>
                 <option value="dark">dark</option>
               </select>
@@ -31,7 +27,7 @@ const Footer = () => (
         </ThemeToggler>
         &copy; 2010 - {data.site.year} <Link to="/"> - Ben Shi</Link>
         <br />
-        :: <Link to="/versions/">v8</Link> built on {data.site.buildTime}
+        :: <Link to="/versions/">v8</Link> compiled {data.site.buildTime} ::
         <br />
       </footer>
     )}

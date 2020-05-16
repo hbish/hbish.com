@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
     })
 
     return (
-      <Layout isIndex={true} title={siteTitle} description={siteDescription}>
+      <Layout title={siteTitle} description={siteDescription}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}

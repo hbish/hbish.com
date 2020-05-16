@@ -1,21 +1,11 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
-import Footer from '../Footer'
 
 import Helmet from 'react-helmet'
 import { useSiteMetadata } from '../../hooks'
-import Header from '../Header'
 import { withPrefix } from 'gatsby-link'
 import Sidebar from '../Sidebar'
 
-const Layout = ({
-  isIndex = false,
-  children,
-  title,
-  description,
-  socialImage,
-}) => {
+const Layout = ({ children, title, description, socialImage }) => {
   const { author, siteUrl } = useSiteMetadata()
   const metaImage = socialImage != null ? socialImage : author.photo
   const metaImageUrl = siteUrl + withPrefix(metaImage)
@@ -34,12 +24,11 @@ const Layout = ({
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
 
-      {/*<Header isIndex={isIndex} />*/}
       <div className="row">
         <div className="column column-20">
           <Sidebar />
         </div>
-        <div className="column column-80">{children}</div>
+        <div className="column column-80 content">{children}</div>
       </div>
     </div>
   )

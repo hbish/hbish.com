@@ -15,29 +15,33 @@ $color-quinary: #e1e1e1 !default;
 
 .container {
   margin-top: 5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   background-color: $color-initial;
 }
 
 body {
   color: $color-secondary;
-  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Cardo', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 1.6rem;
-  font-weight: 300;
   letter-spacing: .01em;
   line-height: 1.6em;
+  overflow-y: scroll;
 }
 
-.select-small {
-  font-size: 1rem;
-  height: 2.8rem;
-  line-height: 2.8rem;
-  padding: 0 1.5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  letter-spacing: -.1 .5rem;
+  font-family: 'Playfair Display', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 .content {
-  grid-column: 2;
-  border-radius: 1rem;
-  padding: 2rem 3rem;
+  margin: 0 5rem;
 }
 
 .section-title {
@@ -70,13 +74,15 @@ article {
 }
 
 nav {
-  a {
-    margin: 0 0.25rem;
+  ul {
+    list-style: none;
   }
+}
 
-  a.is-current {
-    border-bottom: #103FEA solid 0.1rem;
-  }
+.social {
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
 }
 
 figure {
@@ -108,4 +114,8 @@ figure.float-right {
 
 .float-left {
   float: left;
+}
+
+.center {
+  text-align: center;
 }

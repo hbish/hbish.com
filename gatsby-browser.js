@@ -1,3 +1,6 @@
 'use strict'
 
-require('./src/assets/scss/init.scss')
+import 'typeface-cardo'
+import 'typeface-playfair-display'
+
+require('./src/assets/scss/App.scss')
