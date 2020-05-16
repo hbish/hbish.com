@@ -7,26 +7,60 @@ $color-tertiary: #f4f5f6 !default;
 $color-quaternary: #d1d1d1 !default;
 $color-quinary: #e1e1e1 !default;
 
+$color-dark-initial: #292929 !default;
+$color-dark-primary: #A0B3F8 !default;
+$color-dark-secondary: #DCDEE0 !default;
+$color-dark-tertiary: #B1B1C4 !default;
+$color-dark-quaternary: #d1d1d1 !default;
+$color-dark-quinary: #e1e1e1 !default;
+
 @import "~normalize.css";
-@import '~milligram-scss/src/milligram.scss';
+@import 'framework/Base';
+@import 'framework/Blockquote';
+@import 'framework/Divider';
+@import 'framework/Form';
+@import 'framework/Grid';
+@import 'framework/Link';
+@import 'framework/List';
+@import 'framework/Spacing';
+@import 'framework/Table';
+@import 'framework/Typography';
+@import 'framework/Image';
+@import 'framework/Utility';
 
 @import "Sidebar";
 @import "Footer";
 
+:root {
+  --color-initial: #{$color-initial};
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-tertiary: #{$color-tertiary};
+  --color-quaternary: #{$color-quaternary};
+  --color-quinary: #{$color-quinary};
+}
+
+body.dark {
+  --color-initial: #{$color-dark-initial};
+  --color-primary: #{$color-dark-primary};
+  --color-secondary: #{$color-dark-secondary};
+  --color-tertiary: #{$color-dark-tertiary};
+  --color-quaternary: #{$color-dark-quaternary};
+  --color-quinary: #{$color-dark-quinary};
+}
+
 .container {
-  margin-top: 5rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  background-color: $color-initial;
+  padding-top: 5rem;
 }
 
 body {
-  color: $color-secondary;
+  color: var(--color-secondary);
   font-family: 'Cardo', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 1.6rem;
   letter-spacing: .01em;
   line-height: 1.6em;
   overflow-y: scroll;
+  background-color: var(--color-initial);
 }
 
 h1,
@@ -47,7 +81,7 @@ h6 {
 .section-title {
   text-transform: uppercase;
   text-align: center;
-  color: #191919;
+  color: var(--color-secondary);
   position: relative;
   padding-bottom: 1rem;
   margin-bottom: 2.5rem;
@@ -60,7 +94,7 @@ h6 {
     bottom: 0;
     left: 50%;
     margin-left: -25px;
-    background: #bfbfbf;
+    background: var(--color-secondary);
   }
 }
 
@@ -83,6 +117,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   width: 10rem;
+  fill: var(--color-secondary);
 }
 
 figure {

@@ -74,7 +74,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-dark-mode',
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
