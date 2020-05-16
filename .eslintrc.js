@@ -14,7 +14,7 @@ module.exports = {
       jsx: true,
     },
     rules: {
-      'comma-dangle': 0,
+      'comma-dangle': 1,
     },
   },
 }

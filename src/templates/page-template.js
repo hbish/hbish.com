@@ -1,10 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import { rhythm, scale } from '../utils/typography'
-import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
 
 const PageTemplate = ({ data }) => {
@@ -17,27 +14,10 @@ const PageTemplate = ({ data }) => {
       title={`${frontmatter.title} | ${siteTitle}`}
       description={siteDescription}
     >
-      <Content>
-        <SectionTitle>{frontmatter.title}</SectionTitle>
+      <div className={'content'}>
+        <div className={'section-title'}>{frontmatter.title}</div>
         <article dangerouslySetInnerHTML={{ __html: pageBody }} />
-        <hr
-          style={{
-            marginTop: rhythm(1),
-            marginBottom: rhythm(1),
-          }}
-        />
-
-        <div className="row">
-          <div
-            className="column is-full"
-            style={{
-              ...scale(-1 / 6),
-            }}
-          >
-            <Bio />
-          </div>
-        </div>
-      </Content>
+      </div>
     </Layout>
   )
 }

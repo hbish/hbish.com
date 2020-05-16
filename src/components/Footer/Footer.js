@@ -1,34 +1,52 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import { scale, rhythm } from '../../utils/typography'
 
-const Footer = () => (
-  <StaticQuery
-    query={graphql`
-      query FooterQuery {
-        site {
-          buildTime(formatString: "DD/MM/YYYY")
-          year: buildTime(formatString: "YYYY")
+const Footer = () => {
+  let websiteTheme
+  if (typeof window !== `undefined`) {
+    websiteTheme = window.__theme
+  }
+
+  const [theme, setTheme] = useState(websiteTheme)
+
+  useEffect(() => {
+    setTheme(window.__theme)
+    window.__onThemeChange = () => {
+      setTheme(window.__theme)
+    }
+  }, [])
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query FooterQuery {
+          site {
+            buildTime(formatString: "DD/MM/YYYY")
+            year: buildTime(formatString: "YYYY")
+          }
         }
-      }
-    `}
-    render={data => (
-      <footer
-        style={{
-          ...scale(-1 / 2),
-          marginTop: rhythm(0.5),
-          textAlign: 'right',
-          lineHeight: rhythm(0.75),
-        }}
-      >
-        &copy; 2010 - {data.site.year} <Link to="/">Ben Shi</Link> ::{' '}
-        <Link to="/versions/">v7</Link> :: built with{' '}
-        <a href="https://www.gatsbyjs.org">GatsbyJS</a>
-        <br />
-        site compiled on {data.site.buildTime}
-      </footer>
-    )}
-  />
-)
+      `}
+      render={data => (
+        <footer className={'center'}>
+          <div>
+            <label for={'themeId'}>theme</label>
+            <select
+              id="themeId"
+              defaultValue={theme}
+              onChange={e => window.__setPreferredTheme(e.target.value)}
+            >
+              <option value="light">light</option>
+              <option value="dark">dark</option>
+            </select>
+          </div>
+          &copy; 2010 - {data.site.year} <Link to="/"> - Ben Shi</Link>
+          <br />
+          :: <Link to="/versions/">v8</Link> compiled {data.site.buildTime} ::
+          <br />
+        </footer>
+      )}
+    />
+  )
+}
 
 export default Footer

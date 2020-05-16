@@ -1,7 +1,7 @@
 ---
 title: 'Book Review: Musashi – Eiji Yoshikawa (5/5)'
 author: ben
-type: post
+type: note
 date: 2014-05-29T14:38:50+00:00
 url: /musashi-eiji-yoshikawa/
 categories:

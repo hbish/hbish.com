@@ -1,7 +1,7 @@
 ---
 title: Flush entire nginx mod_pagespeed cache
 author: ben
-type: post
+type: note
 date: 2014-12-14T05:12:29+00:00
 url: /flush-entire-nginx-mod_pagespeed-cache/
 categories:

@@ -1,7 +1,7 @@
 ---
 title: UTS 2012 Programming Competition – Q1, Q2, Q3
 author: ben
-type: post
+type: note
 date: 2012-08-28T07:48:27+00:00
 url: /uts-2012-programming-competition-q1-q2-q3/
 categories:

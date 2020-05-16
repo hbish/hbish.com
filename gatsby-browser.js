@@ -1,7 +1,6 @@
 'use strict'
 
-import 'typeface-proza-libre'
-import 'typeface-open-sans'
+import 'typeface-cardo'
+import 'typeface-playfair-display'
 
-require('milligram-scss/src/_Grid.scss')
-require('./src/assets/scss/init.scss')
+require('./src/assets/scss/App.scss')

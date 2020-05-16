@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// Sidebar
+
+.sidebar {
+  position: sticky;
+  top: 5rem;
+
+  hr {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

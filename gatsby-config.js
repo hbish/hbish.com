@@ -40,23 +40,16 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-transformer-remark`,
+            resolve: `gatsby-remark-autolink-headers`,
             options: {
-              plugins: [
-                {
-                  resolve: `gatsby-remark-autolink-headers`,
-                  options: {
-                    isIconAfterHeader: true,
-                  },
-                },
-                {
-                  resolve: `gatsby-remark-highlight-code`,
-                  options: {
-                    terminal: 'carbon',
-                    lineNumbers: true,
-                  },
-                },
-              ],
+              isIconAfterHeader: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              lineNumbers: true,
             },
           },
           'gatsby-remark-copy-linked-files',
@@ -73,7 +66,14 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    // `gatsby-plugin-feed`,
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
@@ -138,13 +138,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
   ],
 }

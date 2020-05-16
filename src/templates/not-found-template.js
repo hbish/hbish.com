@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
 
 const NotFoundTemplate = () => {
@@ -8,10 +7,10 @@ const NotFoundTemplate = () => {
 
   return (
     <Layout title={`Not Found - ${title}`} description={description}>
-      <Content>
-        <SectionTitle>404 - Not Found</SectionTitle>
+      <div className={'content'}>
+        <div className={'section-title'}>404 - Not Found</div>
         <p>You hit a route that does not exist.</p>
-      </Content>
+      </div>
     </Layout>
   )
 }

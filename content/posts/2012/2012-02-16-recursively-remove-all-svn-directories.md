@@ -1,7 +1,7 @@
 ---
 title: Recursively remove all .svn directories
 author: ben
-type: post
+type: note
 date: 2012-02-16T07:43:21+00:00
 url: /recursively-remove-all-svn-directories/
 categories:

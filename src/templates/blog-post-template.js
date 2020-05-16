@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import { rhythm, scale } from '../utils/typography'
-import { Content, SectionTitle } from '../components/Utils'
 import { useSiteMetadata } from '../hooks'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -24,75 +21,32 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       title={`${post.frontmatter.title} | ${siteTitle}`}
       description={post.excerpt}
     >
-      <Content>
-        <SectionTitle>Blog Post</SectionTitle>
+      <div className={'content'}>
+        <div className={'section-title'}>Blog Post</div>
+        <div>{post.frontmatter.date}</div>
         <h1>{post.frontmatter.title}</h1>
-        <div
-          className="row"
-          style={{
-            fontSize: rhythm(3 / 5),
-            marginBottom: '1rem',
-          }}
-        >
-          <div className="column">
-            Posted Under: <em>{post.frontmatter.categories}</em>
-          </div>
-          <div
-            className="column"
-            style={{
-              textAlign: 'right',
-            }}
-          >
-            {post.frontmatter.date}
-          </div>
-        </div>
-        <div className="row">
-          <article
-            className="column"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-        </div>
+        <article dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <div className="row" style={{ marginTop: '1rem' }}>
-          <div className={'column'}>
-            {previous && (
-              <span>
-                <strong>{'prev: '}</strong>
-                <Link to={previous.fields.slug} rel="prev">
-                  {previous.frontmatter.title}
-                </Link>
-              </span>
-            )}
-            <br />
-            {next && (
-              <span>
-                <strong>{'next: '}</strong>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title}
-                </Link>
-              </span>
-            )}
-          </div>
+        <div style={{ marginTop: '1rem' }}>
+          {previous && (
+            <span>
+              <strong>{'prev: '}</strong>
+              <Link to={previous.fields.slug} rel="prev">
+                {previous.frontmatter.title}
+              </Link>
+            </span>
+          )}
+          <br />
+          {next && (
+            <span>
+              <strong>{'next: '}</strong>
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title}
+              </Link>
+            </span>
+          )}
         </div>
-
-        <hr
-          style={{
-            marginTop: rhythm(1),
-            marginBottom: rhythm(1),
-          }}
-        />
-
-        <div className="row">
-          <div
-            className="column is-full"
-            style={{
-              ...scale(-1 / 6),
-            }}
-          >
-            <Bio />
-          </div>
-        </div>
-      </Content>
+      </div>
     </Layout>
   )
 }

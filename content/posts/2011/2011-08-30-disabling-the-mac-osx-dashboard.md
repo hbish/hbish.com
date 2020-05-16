@@ -1,7 +1,7 @@
 ---
 title: Disabling the Mac OSX Dashboard
 author: ben
-type: post
+type: note
 date: 2011-08-30T06:58:18+00:00
 url: /disabling-the-mac-osx-dashboard/
 categories:
