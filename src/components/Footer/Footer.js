@@ -29,10 +29,10 @@ const Footer = () => {
       render={data => (
         <footer className={'center'}>
           <div>
-            <label for={'themeId'}>theme</label>
+            <label htmlFor={'themeId'}>theme</label>
             <select
               id="themeId"
-              defaultValue={theme}
+              value={theme}
               onChange={e => window.__setPreferredTheme(e.target.value)}
             >
               <option value="light">light</option>
