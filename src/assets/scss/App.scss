@@ -116,14 +116,18 @@ nav {
 .social {
   margin-left: auto;
   margin-right: auto;
-  width: 10rem;
+  width: 15rem;
   fill: var(--color-secondary);
+  svg {
+    margin: 0 0 0 0.5rem;
+  }
 }
 
 figure {
   display: block;
   width: 100%;
   height: auto;
+  max-width: 250px;
 
   img {
     margin-bottom: 0;
@@ -131,24 +135,10 @@ figure {
 }
 
 figcaption {
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
-}
-
-figure.float-left,
-figure.float-right {
-  max-width: 310px;
-  padding: 0 1.625rem;
-}
-
-.float-right {
-  float: right;
-}
-
-.float-left {
-  float: left;
 }
 
 .center {

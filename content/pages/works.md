@@ -14,7 +14,7 @@ _I'm still in the process of consolidating my work in the one place, this page w
 
 #### smex [[github](https://github.com/hbish/smex)]
 
-<div style="display: inline-block">
+<div>
 <figure class="float-right" >
     <a href="https://asciinema.org/a/327587">
 	    <img src="https://asciinema.org/a/327587.svg" alt="hbish/smex demo">

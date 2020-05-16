@@ -29,7 +29,7 @@ const Footer = () => {
       render={data => (
         <footer className={'center'}>
           <div>
-            <label>theme</label>
+            <label for={'themeId'}>theme</label>
             <select
               id="themeId"
               defaultValue={theme}

@@ -61,17 +61,20 @@ const Sidebar = ({ data }) => {
         </ul>
       </nav>
       <div className={'social'}>
-        <a href="mailto:ben@hbish.com">
-          <IcEmail />
+        <a href="mailto:ben@hbish.com" title={'email ben'}>
+          <IcEmail aria-labelledby={'title'} />
         </a>{' '}
-        <a href="https://twitter.com/hbish/">
-          <IcTwitter />
+        <a href="https://twitter.com/hbish/" title={'tweet ben'}>
+          <IcTwitter aria-labelledby={'title'} />
         </a>{' '}
-        <a href="https://au.linkedin.com/in/benshi/">
-          <IcLinkedin />
+        <a
+          href="https://au.linkedin.com/in/benshi/"
+          title={'connect with ben on linkedin'}
+        >
+          <IcLinkedin aria-labelledby={'title'} />
         </a>{' '}
-        <a href="https://github.com/hbish/">
-          <IcGithub />
+        <a href="https://github.com/hbish/" title={'follow ben on github'}>
+          <IcGithub aria-labelledby={'title'} />
         </a>
       </div>
       <hr />
