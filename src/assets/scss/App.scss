@@ -14,6 +14,20 @@ $color-dark-tertiary: #B1B1C4 !default;
 $color-dark-quaternary: #d1d1d1 !default;
 $color-dark-quinary: #e1e1e1 !default;
 
+$color-gruv-light-initial: #f2e5bc !default;
+$color-gruv-light-primary: #7c6f64 !default;
+$color-gruv-light-secondary: #282828 !default;
+$color-gruv-light-tertiary: #f9f5d7 !default;
+$color-gruv-light-quaternary: #d1d1d1 !default;
+$color-gruv-light-quinary: #e1e1e1 !default;
+
+$color-gruv-dark-initial: #272727 !default;
+$color-gruv-dark-primary: #fabd2f !default;
+$color-gruv-dark-secondary: #ebdbb2 !default;
+$color-gruv-dark-tertiary: #B1B1C4 !default;
+$color-gruv-dark-quaternary: #d1d1d1 !default;
+$color-gruv-dark-quinary: #e1e1e1 !default;
+
 @import "~normalize.css";
 @import 'framework/Base';
 @import 'framework/Blockquote';
@@ -49,8 +63,26 @@ body.dark {
   --color-quinary: #{$color-dark-quinary};
 }
 
+body.gruv-light {
+  --color-initial: #{$color-gruv-light-initial};
+  --color-primary: #{$color-gruv-light-primary};
+  --color-secondary: #{$color-gruv-light-secondary};
+  --color-tertiary: #{$color-gruv-light-tertiary};
+  --color-quaternary: #{$color-gruv-light-quaternary};
+  --color-quinary: #{$color-gruv-light-quinary};
+}
+
+body.gruv-dark {
+  --color-initial: #{$color-gruv-dark-initial};
+  --color-primary: #{$color-gruv-dark-primary};
+  --color-secondary: #{$color-gruv-dark-secondary};
+  --color-tertiary: #{$color-gruv-dark-tertiary};
+  --color-quaternary: #{$color-gruv-dark-quaternary};
+  --color-quinary: #{$color-gruv-dark-quinary};
+}
+
 .container {
-  padding-top: 5rem;
+  padding: 5rem 4rem 0 4rem;
 }
 
 body {
@@ -147,12 +179,43 @@ figcaption {
   height: 1100px;
 }
 
-@media (min-width: 200px) and (max-width:650px) {
+@media (min-width: 200px) and (max-width:640px) {
   .row .column[class*=" column-"] {
     max-width: 100%;
   }
 
   .content {
     padding: 0 1rem;
+  }
+
+  .waterfall {
+    height: 1500px;
+  }
+
+  .sidebar {
+    position: inherit;
+    width: 80%;
+    margin: 0 auto;
+
+    nav {
+      ul {
+        display: inline-flex;
+        list-style: none;
+        margin-bottom: 1rem;
+
+        li {
+          padding: 0 0.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    label {
+      display: none;
+    }
+  }
+
+  footer {
+    margin-bottom: 5rem;
   }
 }

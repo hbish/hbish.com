@@ -102,6 +102,8 @@ const Sidebar = ({ data }) => {
         >
           <option value="light">light</option>
           <option value="dark">dark</option>
+          <option value="gruv-light">gruv-light</option>
+          <option value="gruv-dark">gruv-dark</option>
         </select>
       </div>
       <hr />
