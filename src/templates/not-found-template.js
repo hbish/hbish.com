@@ -9,7 +9,7 @@ const NotFoundTemplate = () => {
     <Layout title={`Not Found - ${title}`} description={description}>
       <div className={'content'}>
         <div className={'section-title'}>404 - Not Found</div>
-        <p>You hit a route that does not exist.</p>
+        <p className={'center'}>You hit a route that does not exist.</p>
       </div>
     </Layout>
   )

@@ -6,6 +6,12 @@
   position: sticky;
   top: 5rem;
 
+  .avatar {
+    border-radius: 10rem;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
   hr {
     width: 80%;
     margin-right: auto;
@@ -16,6 +22,17 @@
     ul {
       list-style: none;
       width: auto;
+    }
+  }
+
+  .social {
+    margin-left: auto;
+    margin-right: auto;
+    width: 12rem;
+    fill: var(--color-secondary);
+
+    svg {
+      margin: 0 0 0 0.5rem;
     }
   }
 

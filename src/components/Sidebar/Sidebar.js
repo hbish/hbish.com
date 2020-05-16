@@ -41,12 +41,7 @@ const Sidebar = ({ data }) => {
             <Img
               fluid={data['profilePic'].childImageSharp.fluid}
               alt={`Ben Shi`}
-              style={{
-                borderRadius: '10rem',
-                marginBottom: '3rem',
-                maxWidth: '20rem',
-                margin: '0 auto',
-              }}
+              className={'avatar'}
             />
           </Link>
         )}
@@ -94,17 +89,20 @@ const Sidebar = ({ data }) => {
         </a>
       </div>
       <div>
-        <label htmlFor={'themeId'}>theme</label>
-        <select
-          id="themeId"
-          value={theme}
-          onChange={e => window.__setPreferredTheme(e.target.value)}
-        >
-          <option value="light">light</option>
-          <option value="dark">dark</option>
-          <option value="gruv-light">gruv-light</option>
-          <option value="gruv-dark">gruv-dark</option>
-        </select>
+        <label htmlFor={'themeId'}>
+          theme
+          <br />
+          <select
+            id="themeId"
+            value={theme}
+            onChange={e => window.__setPreferredTheme(e.target.value)}
+          >
+            <option value="light">light</option>
+            <option value="dark">dark</option>
+            <option value="gruv-light">gruv-light</option>
+            <option value="gruv-dark">gruv-dark</option>
+          </select>
+        </label>
       </div>
       <hr />
     </div>
