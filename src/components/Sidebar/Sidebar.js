@@ -3,6 +3,10 @@ import { graphql, Link, StaticQuery } from 'gatsby'
 import { useSiteMetadata } from '../../hooks'
 import Img from 'gatsby-image'
 import Footer from '../Footer'
+import IcEmail from '../../assets/svg/mail.inline.svg'
+import IcTwitter from '../../assets/svg/twitter.inline.svg'
+import IcLinkedin from '../../assets/svg/linkedin.inline.svg'
+import IcGithub from '../../assets/svg/github.inline.svg'
 
 const Sidebar = ({ data }) => {
   const { author } = useSiteMetadata()
@@ -14,7 +18,7 @@ const Sidebar = ({ data }) => {
           query {
             profilePic: file(relativePath: { eq: "profile-pic.png" }) {
               childImageSharp {
-                fluid(maxWidth: 125) {
+                fluid(maxWidth: 200) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -22,17 +26,20 @@ const Sidebar = ({ data }) => {
           }
         `}
         render={data => (
-          <Img
-            fluid={data['profilePic'].childImageSharp.fluid}
-            alt={`Ben Shi`}
-            style={{}}
-          />
+          <Link to={'/'}>
+            <Img
+              fluid={data['profilePic'].childImageSharp.fluid}
+              alt={`Ben Shi`}
+              style={{ borderRadius: '10rem', marginBottom: '3rem' }}
+            />
+          </Link>
         )}
       />
+      <hr />
       <p>
-        I'm <strong>Ben Shi</strong>, a Sydney-based software engineer
-        specialising in micro-services and API development. This is a playground
-        for me to document my learnings and experiences as a technologist.
+        I'm a software engineer specialising in microservices and API
+        development. This is a playground for me to document my learnings and
+        experiences.
       </p>
       <ul>
         <li>
@@ -48,13 +55,20 @@ const Sidebar = ({ data }) => {
           <Link to="/uses/">/uses</Link>
         </li>
       </ul>
-
-      <span>
-        <strong>Contact:</strong> [ <a href="mailto:ben@hbish.com">email</a> |{' '}
-        <a href="https://twitter.com/hbish/">twitter</a> |{' '}
-        <a href="https://au.linkedin.com/in/benshi/">linkedin</a> |{' '}
-        <a href="https://github.com/hbish/">github</a> ]
-      </span>
+      <p>
+        <a href="mailto:ben@hbish.com">
+          <IcEmail />
+        </a>{' '}
+        <a href="https://twitter.com/hbish/">
+          <IcTwitter />
+        </a>{' '}
+        <a href="https://au.linkedin.com/in/benshi/">
+          <IcLinkedin />
+        </a>{' '}
+        <a href="https://github.com/hbish/">
+          <IcGithub />
+        </a>
+      </p>
       <Footer />
     </div>
   )

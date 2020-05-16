@@ -73,7 +73,15 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    // `gatsby-plugin-feed`,
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
+    'gatsby-plugin-dark-mode',
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
