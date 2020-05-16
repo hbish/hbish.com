@@ -144,3 +144,11 @@ figcaption {
 .center {
   text-align: center;
 }
+
+.waterfall {
+  background-image: linear-gradient(to bottom, var(--color-primary) 0%, transparent 100%);
+  overflow: hidden;
+  width: 15px;
+  min-width: 15px;
+  height: 1100px;
+}

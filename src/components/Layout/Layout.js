@@ -11,24 +11,26 @@ const Layout = ({ children, title, description, socialImage }) => {
   const metaImageUrl = siteUrl + withPrefix(metaImage)
 
   return (
-    <div className="container">
-      <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:image" content={metaImageUrl} />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={metaImageUrl} />
-      </Helmet>
-
-      <div className="row">
-        <div className="column column-20">
-          <Sidebar />
+    <div>
+      <div className={'waterfall float-left'} />
+      <div className="container">
+        <Helmet>
+          <html lang="en" />
+          <title>{title}</title>
+          <meta name="description" content={description} />
+          <meta property="og:site_name" content={title} />
+          <meta property="og:image" content={metaImageUrl} />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="twitter:image" content={metaImageUrl} />
+        </Helmet>
+        <div className="row">
+          <div className="column column-20">
+            <Sidebar />
+          </div>
+          <div className="column column-80 content">{children}</div>
         </div>
-        <div className="column column-80 content">{children}</div>
       </div>
     </div>
   )
