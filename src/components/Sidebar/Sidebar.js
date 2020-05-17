@@ -75,16 +75,16 @@ const Sidebar = ({ data }) => {
         <a href="mailto:ben@hbish.com" title={'email ben'}>
           <IcEmail aria-labelledby={'title'} />
         </a>{' '}
-        <a href="https://twitter.com/hbish/" title={'tweet ben'}>
+        <a href="https://twitter.com/hbish" title={'tweet ben'} rel={'me'}>
           <IcTwitter aria-labelledby={'title'} />
         </a>{' '}
         <a
-          href="https://au.linkedin.com/in/benshi/"
+          href="https://au.linkedin.com/in/benshi"
           title={'connect with ben on linkedin'}
         >
           <IcLinkedin aria-labelledby={'title'} />
         </a>{' '}
-        <a href="https://github.com/hbish/" title={'follow ben on github'}>
+        <a href="https://github.com/hbish" title={'follow ben on github'}>
           <IcGithub aria-labelledby={'title'} />
         </a>
       </div>

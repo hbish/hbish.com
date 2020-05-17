@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <h1>{post.frontmatter.title}</h1>
         <article dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <div style={{ marginTop: '1rem' }}>
+        <div style={{ marginTop: '1rem', marginBottom: '5rem' }}>
           {previous && (
             <span>
               <strong>{'prev: '}</strong>
