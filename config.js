@@ -8,7 +8,4 @@ module.exports = {
     name: 'Ben Shi',
     photo: '/media/profile-pic.png',
   },
-  analytics: {
-    google: process.env.GOOGLE_API_KEY,
-  },
 }

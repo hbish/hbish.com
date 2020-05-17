@@ -18,6 +18,11 @@ const Layout = ({ children, title, description, socialImage }) => {
         <Helmet>
           <html lang="en" />
           <title>{title}</title>
+          <link
+            rel="webmention"
+            href="https://webmention.io/hbish.com/webmention"
+          />
+          <link rel="pingback" href="https://webmention.io/hbish.com/xmlrpc" />
           <meta name="description" content={description} />
           <meta property="og:site_name" content={title} />
           <meta property="og:image" content={metaImageUrl} />
@@ -38,6 +43,11 @@ const Layout = ({ children, title, description, socialImage }) => {
           </div>
         </div>
       </div>
+      <script
+        data-goatcounter="https://hbish.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"
+      />
     </div>
   )
 }
