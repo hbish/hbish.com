@@ -138,6 +138,18 @@ article {
       display: inline list-item;
     }
   }
+
+  a img {
+    border: 0.3rem solid;
+    border-image-source: linear-gradient(140deg, var(--color-primary) 0%, var(--color-initial) 80%);
+    border-image-slice: 60 30;
+  }
+
+  a + em {
+    display: inherit;
+    text-align: center;
+    font-size: 1.4rem;
+  }
 }
 
 figure {
@@ -167,7 +179,8 @@ figcaption {
   overflow: hidden;
   width: 10px;
   min-width: 10px;
-  height: 1100px;
+  height: 100vh;
+  min-height: 100vh;
 }
 
 @media (min-width: 200px) and (max-width: 640px) {
@@ -177,10 +190,6 @@ figcaption {
 
   .content {
     padding: 0 0;
-  }
-
-  .waterfall {
-    height: 1500px;
   }
 
   .sidebar {

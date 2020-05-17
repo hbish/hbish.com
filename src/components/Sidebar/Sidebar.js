@@ -42,7 +42,8 @@ const Sidebar = ({ data }) => {
               <Img
                 fluid={data['profilePic'].childImageSharp.fluid}
                 alt={`Ben Shi`}
-                className={'avatar u-photo'}
+                className={'avatar'}
+                placeholderClassName={'u-photo'}
               />
             </Link>
           )}
@@ -52,8 +53,9 @@ const Sidebar = ({ data }) => {
           <strong>Ben Shi</strong>
         </a>
         <p className={'p-note'}>
-          👋 I'm a software engineer from Sydney, Australia. This is a
-          playground for me to document my learnings and experiences.
+          👋 I'm a software engineer from Sydney, Australia. I love solving
+          complex issues through purposeful software. I also enjoy a good burger
+          and g&t.
         </p>
         <nav>
           <ul>

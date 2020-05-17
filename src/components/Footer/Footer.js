@@ -18,6 +18,13 @@ const Footer = () => {
           <br />
           :: <Link to="/versions/">v8</Link> compiled {data.site.buildTime} ::
           <br />
+          <a href="https://xn--sr8hvo.ws/%F0%9F%8D%B7%F0%9F%8E%87%E2%8F%AF/previous">
+            ←
+          </a>
+          🕸💍
+          <a href="https://xn--sr8hvo.ws/%F0%9F%8D%B7%F0%9F%8E%87%E2%8F%AF/next">
+            →
+          </a>
         </footer>
       )}
     />
