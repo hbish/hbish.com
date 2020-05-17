@@ -42,7 +42,8 @@ class BlogIndex extends React.Component {
                   {index === 0 && <h3>{year}</h3>}
                   <div>
                     <strong>{node.frontmatter.date}</strong> ::{' '}
-                    <Link to={node.fields.slug}>{title}</Link>
+                    <Link to={node.fields.slug}>{title}</Link> ::{' '}
+                    {node.timeToRead} min read
                     <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                   </div>
                 </div>
@@ -72,6 +73,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          timeToRead
           excerpt(pruneLength: 280)
           fields {
             slug

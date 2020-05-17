@@ -24,7 +24,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       <div className={'content'}>
         <div className={'section-title'}>Blog Post</div>
         <article className={'h-entry'}>
-          <div className={'dt-published'}>{post.frontmatter.date}</div>
+          <small>
+            🗓 <span className={'dt-published'}>{post.frontmatter.date}</span> ::{' '}
+            🕑 {post.timeToRead} min read
+          </small>
           <h1 className={'p-name'}>{post.frontmatter.title}</h1>
           <div
             className={'e-content'}
@@ -39,6 +42,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
               Ben Shi
             </a>
             <p className={'p-summary'}>{post.excerpt}</p>
+            <p className={'u-url'}>{'https://hbish.com' + post.fields.slug}</p>
           </div>
         </article>
 
@@ -82,11 +86,15 @@ export const pageQuery = graphql`
       id
       excerpt
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         categories
         tags
+      }
+      fields {
+        slug
       }
     }
   }
