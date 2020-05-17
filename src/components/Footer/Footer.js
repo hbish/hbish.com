@@ -14,7 +14,7 @@ const Footer = () => {
       `}
       render={data => (
         <footer className={'center'}>
-          &copy; 2010 - {data.site.year} <Link to="/"> - Ben Shi</Link>
+          &copy; 2009 - {data.site.year} <Link to="/"> - Ben Shi</Link>
           <br />
           :: <Link to="/versions/">v8</Link> compiled {data.site.buildTime} ::
           <br />

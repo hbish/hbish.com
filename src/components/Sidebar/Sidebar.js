@@ -24,69 +24,83 @@ const Sidebar = ({ data }) => {
 
   return (
     <div className="sidebar center">
-      <StaticQuery
-        query={graphql`
-          query {
-            profilePic: file(relativePath: { eq: "profile-pic.png" }) {
-              childImageSharp {
-                fluid(maxWidth: 200) {
-                  ...GatsbyImageSharpFluid_withWebp
+      <div className={'h-card'}>
+        <StaticQuery
+          query={graphql`
+            query {
+              profilePic: file(relativePath: { eq: "profile-pic.png" }) {
+                childImageSharp {
+                  fluid(maxWidth: 200) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
                 }
               }
             }
-          }
-        `}
-        render={data => (
-          <Link to={'/'}>
-            <Img
-              fluid={data['profilePic'].childImageSharp.fluid}
-              alt={`Ben Shi`}
-              className={'avatar'}
-            />
-          </Link>
-        )}
-      />
-      <hr />
-      <p>
-        👋 I'm a software engineer specialising in microservices and API
-        development. This is a playground for me to document my learnings and
-        experiences.
-      </p>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/about/">/about</Link>
-          </li>
-          <li>
-            <Link to="/work/">/work</Link>
-          </li>
-          <li>
-            <Link to="/talks/">/talks</Link>
-          </li>
-          <li>
-            <Link to="/uses/">/uses</Link>
-          </li>
-          <li>
-            <Link to="/notes/">/notes</Link>
-          </li>
-        </ul>
-      </nav>
-      <div className={'social'}>
-        <a href="mailto:ben@hbish.com" title={'email ben'}>
-          <IcEmail aria-labelledby={'title'} />
-        </a>{' '}
-        <a href="https://twitter.com/hbish" title={'tweet ben'} rel={'me'}>
-          <IcTwitter aria-labelledby={'title'} />
-        </a>{' '}
-        <a
-          href="https://au.linkedin.com/in/benshi"
-          title={'connect with ben on linkedin'}
-        >
-          <IcLinkedin aria-labelledby={'title'} />
-        </a>{' '}
-        <a href="https://github.com/hbish" title={'follow ben on github'}>
-          <IcGithub aria-labelledby={'title'} />
+          `}
+          render={data => (
+            <Link to={'/'}>
+              <Img
+                fluid={data['profilePic'].childImageSharp.fluid}
+                alt={`Ben Shi`}
+                className={'avatar u-photo'}
+              />
+            </Link>
+          )}
+        />
+        <hr />
+        <a href="https://hbish.com/" className={'p-name u-url'}>
+          <strong>Ben Shi</strong>
         </a>
+        <p className={'p-note'}>
+          👋 I'm a software engineer from Sydney, Australia. This is a
+          playground for me to document my learnings and experiences.
+        </p>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/about/">/about</Link>
+            </li>
+            <li>
+              <Link to="/work/">/work</Link>
+            </li>
+            <li>
+              <Link to="/talks/">/talks</Link>
+            </li>
+            <li>
+              <Link to="/uses/">/uses</Link>
+            </li>
+            <li>
+              <Link to="/notes/">/notes</Link>
+            </li>
+          </ul>
+        </nav>
+        <div className={'social'}>
+          <a
+            href="mailto:ben@hbish.com"
+            title={'email ben'}
+            rel={'me'}
+            className={'u-email'}
+          >
+            <IcEmail aria-labelledby={'title'} />
+          </a>{' '}
+          <a href="https://twitter.com/hbish" title={'tweet ben'} rel={'me'}>
+            <IcTwitter aria-labelledby={'title'} />
+          </a>{' '}
+          <a
+            href="https://au.linkedin.com/in/benshi"
+            title={'connect with ben on linkedin'}
+            rel={'me'}
+          >
+            <IcLinkedin aria-labelledby={'title'} />
+          </a>{' '}
+          <a
+            href="https://github.com/hbish"
+            title={'follow ben on github'}
+            rel={'me'}
+          >
+            <IcGithub aria-labelledby={'title'} />
+          </a>
+        </div>
       </div>
       <div>
         <label htmlFor={'themeId'}>

@@ -23,9 +23,24 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     >
       <div className={'content'}>
         <div className={'section-title'}>Blog Post</div>
-        <div>{post.frontmatter.date}</div>
-        <h1>{post.frontmatter.title}</h1>
-        <article dangerouslySetInnerHTML={{ __html: post.html }} />
+        <article className={'h-entry'}>
+          <div className={'dt-published'}>{post.frontmatter.date}</div>
+          <h1 className={'p-name'}>{post.frontmatter.title}</h1>
+          <div
+            className={'e-content'}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+          <div
+            style={{
+              display: 'none',
+            }}
+          >
+            <a href={'https://hbish.com/'} className={'p-author h-card'}>
+              Ben Shi
+            </a>
+            <p className={'p-summary'}>{post.excerpt}</p>
+          </div>
+        </article>
 
         <div style={{ marginTop: '1rem', marginBottom: '5rem' }}>
           {previous && (
