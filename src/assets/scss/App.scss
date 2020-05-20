@@ -132,6 +132,10 @@ h6 {
 }
 
 article {
+  .meta {
+    margin-bottom: 2rem;
+  }
+
   details {
     summary {
       font-weight: 500;
@@ -149,6 +153,17 @@ article {
     display: inherit;
     text-align: center;
     font-size: 1.4rem;
+  }
+
+  .mentions {
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: 0.2rem;
+        font-size: 1.4rem;
+      }
+    }
   }
 }
 

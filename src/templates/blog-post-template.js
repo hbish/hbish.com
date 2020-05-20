@@ -3,6 +3,8 @@ import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
+import WebmentionReplies from '../components/Webmention/WebmentionFeed'
+import WebmentionCount from '../components/Webmention/WebmentionCount'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const { title: siteTitle } = useSiteMetadata()
@@ -24,11 +26,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       <div className={'content'}>
         <div className={'section-title'}>Blog Post</div>
         <article className={'h-entry'}>
-          <small>
-            🗓 <span className={'dt-published'}>{post.frontmatter.date}</span> ::{' '}
-            🕑 {post.timeToRead} min read
-          </small>
           <h1 className={'p-name'}>{post.frontmatter.title}</h1>
+          <div className={'meta'}>
+            🗓 <span className={'dt-published'}>{post.frontmatter.date}</span> ::
+            🕑 {post.timeToRead} min read ::{' '}
+            <WebmentionCount target={'https://hbish.com' + post.fields.slug} />
+          </div>
           <div
             className={'e-content'}
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -44,7 +47,34 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <p className={'p-summary'}>{post.excerpt}</p>
             <p className={'u-url'}>{'https://hbish.com' + post.fields.slug}</p>
           </div>
+          <hr />
+
+          {/*          <div>
+            <a
+              href={`https://twitter.com/intent/tweet/?text=My%20thoughts%20on%20${'https://hbish.com' +
+                post.fields.slug}`}
+            >
+              Tweet about this post
+            </a>
+            <form method="get" action="https://quill.p3k.io/" target="_blank">
+              <input type="hidden" name="dontask" value="1" />
+              <input type="hidden" name="me" value="https://commentpara.de/" />
+              <input
+                type="hidden"
+                name="reply"
+                value={'https://hbish.com' + post.fields.slug}
+              />
+              <input type="submit" value="Write a comment" />
+            </form>
+          </div>
+          <div>
+            <h5>Recent Mentions</h5>
+            <WebmentionReplies
+              target={'https://hbish.com' + post.fields.slug}
+            />
+          </div>*/}
         </article>
+        <hr />
 
         <div style={{ marginTop: '1rem', marginBottom: '5rem' }}>
           {previous && (
