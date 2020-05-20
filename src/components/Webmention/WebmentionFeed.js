@@ -1,20 +1,42 @@
 import React, { useEffect, useState, useReducer } from 'react'
 
-function Replies({ replies }) {
-  const replyElements = replies.map(link => (
+function Likes({ likes }) {
+  const likeElements = likes.map(link => (
     <li key={link.id}>
-      <div dangerouslySetInnerHTML={{ __html: link.activity.sentence_html }} />
+      <img
+        src={link.data.author.photo}
+        className={'liked-by'}
+        alt={link.data.author.name}
+      />
+      👏
     </li>
   ))
 
   return (
     <>
-      {replies && replies.length ? (
+      {likes && likes.length && (
+        <div className={'likes'}>
+          <ul>{likeElements}</ul>
+        </div>
+      )}
+    </>
+  )
+}
+
+function Replies({ replies }) {
+  const replyElements = replies.map(link => (
+    <li key={link.id}>
+      💬 <a href={link.data.url}>{link.data.author.name}</a> replied "
+      {link.data.content}"
+    </li>
+  ))
+
+  return (
+    <>
+      {replies && replies.length && (
         <div className={'mentions'}>
           <ul>{replyElements}</ul>
         </div>
-      ) : (
-        <div>There is no reply...</div>
       )}
     </>
   )
@@ -23,14 +45,13 @@ function Replies({ replies }) {
 function WebmentionReplies({ target }) {
   const [page, setPage] = useState(0)
   const [fetchState, setFetchState] = useState('fetching')
-  const mergeReplies = (oldReplies, newReplies) => [
-    ...oldReplies,
-    ...newReplies,
-  ]
+  const mergeResult = (old, newRes) => [...old, ...newRes]
   const initialReplies = []
+  const initialLikes = []
   // "The ‘useReducer’ Hook" - https://leewarrick.com/blog/a-guide-to-usestate-and-usereducer/
   // Instead of "useState", you can simply pass a merge logic as a reducer
-  const [replies, setReplies] = useReducer(mergeReplies, initialReplies)
+  const [replies, setReplies] = useReducer(mergeResult, initialReplies)
+  const [likes, setLikes] = useReducer(mergeResult, initialLikes)
   const perPage = 30
 
   const getMentions = () =>
@@ -42,8 +63,11 @@ function WebmentionReplies({ target }) {
 
   // Load initial comments once
   useEffect(() => {
-    getMentions().then(newReplies => {
-      setReplies(newReplies)
+    getMentions().then(feed => {
+      const likeFeed = feed.filter(item => item.activity.type === 'like')
+      const replyFeed = feed.filter(item => item.activity.type !== 'like')
+      setLikes(likeFeed)
+      setReplies(replyFeed)
       setFetchState('done')
     })
   }, [])
@@ -51,7 +75,9 @@ function WebmentionReplies({ target }) {
   return (
     <>
       {fetchState === 'fetching' && <span>Fetching Replies...</span>}
-      <Replies replies={replies} />
+      {(likes.length > 0 || replies.length > 0) && <h5>Recent Mentions</h5>}
+      {likes.length > 0 && <Likes likes={likes} />}
+      {replies.length > 0 && <Replies replies={replies} />}
     </>
   )
 }

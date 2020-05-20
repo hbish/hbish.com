@@ -31,6 +31,7 @@ $color-gruv-dark-quinary: #e1e1e1 !default;
 @import "~normalize.css";
 @import 'framework/Base';
 @import 'framework/Blockquote';
+@import 'framework/Button';
 @import 'framework/Divider';
 @import 'framework/Form';
 @import 'framework/Grid';
@@ -44,6 +45,7 @@ $color-gruv-dark-quinary: #e1e1e1 !default;
 
 @import "Sidebar";
 @import "Footer";
+@import "Post";
 
 :root {
   --color-initial: #{$color-initial};
@@ -85,7 +87,7 @@ body.gruv-dark {
   padding: 5rem 4rem 0 4rem;
 }
 
-body {
+body, input {
   color: var(--color-secondary);
   font-family: 'Cardo', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 1.6rem;
@@ -128,42 +130,6 @@ h6 {
     left: 50%;
     margin-left: -25px;
     background: var(--color-secondary);
-  }
-}
-
-article {
-  .meta {
-    margin-bottom: 2rem;
-  }
-
-  details {
-    summary {
-      font-weight: 500;
-      display: inline list-item;
-    }
-  }
-
-  a img {
-    border: 0.3rem solid;
-    border-image-source: linear-gradient(140deg, var(--color-primary) 0%, var(--color-initial) 80%);
-    border-image-slice: 60 30;
-  }
-
-  a + em {
-    display: inherit;
-    text-align: center;
-    font-size: 1.4rem;
-  }
-
-  .mentions {
-    ul {
-      list-style: none;
-
-      li {
-        margin-bottom: 0.2rem;
-        font-size: 1.4rem;
-      }
-    }
   }
 }
 

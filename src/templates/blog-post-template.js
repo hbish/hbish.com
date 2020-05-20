@@ -47,39 +47,50 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <p className={'p-summary'}>{post.excerpt}</p>
             <p className={'u-url'}>{'https://hbish.com' + post.fields.slug}</p>
           </div>
-          <hr />
-
-          {/*          <div>
-            <a
-              href={`https://twitter.com/intent/tweet/?text=My%20thoughts%20on%20${'https://hbish.com' +
-                post.fields.slug}`}
-            >
-              Tweet about this post
-            </a>
-            <form method="get" action="https://quill.p3k.io/" target="_blank">
-              <input type="hidden" name="dontask" value="1" />
-              <input type="hidden" name="me" value="https://commentpara.de/" />
-              <input
-                type="hidden"
-                name="reply"
-                value={'https://hbish.com' + post.fields.slug}
-              />
-              <input type="submit" value="Write a comment" />
-            </form>
-          </div>
-          <div>
-            <h5>Recent Mentions</h5>
-            <WebmentionReplies
-              target={'https://hbish.com' + post.fields.slug}
-            />
-          </div>*/}
         </article>
+
         <hr />
 
-        <div style={{ marginTop: '1rem', marginBottom: '5rem' }}>
+        <div className={'socialize'}>
+          <form
+            id="comment-form"
+            method="get"
+            action="https://quill.p3k.io/"
+            target="_blank"
+          >
+            <input type="hidden" name="dontask" value="1" />
+            <input type="hidden" name="me" value="https://commentpara.de/" />
+            <input
+              type="hidden"
+              name="reply"
+              value={'https://hbish.com' + post.fields.slug}
+            />
+          </form>
+          <a
+            className={'button button-outline button-small'}
+            target="_blank"
+            href={`https://twitter.com/intent/tweet/?text=My%20thoughts%20on%20${'https://hbish.com' +
+              post.fields.slug}`}
+          >
+            Tweet this post{' '}
+          </a>
+          <input
+            form="comment-form"
+            className={'button button-outline button-small'}
+            type="submit"
+            value="Write a comment"
+          />{' '}
+        </div>
+        <div>
+          <WebmentionReplies target={'https://hbish.com' + post.fields.slug} />
+        </div>
+
+        <hr />
+
+        <div className={'prev-next'}>
           {previous && (
             <span>
-              <strong>{'prev: '}</strong>
+              <strong>{'⏪'}</strong>{' '}
               <Link to={previous.fields.slug} rel="prev">
                 {previous.frontmatter.title}
               </Link>
@@ -88,10 +99,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           <br />
           {next && (
             <span>
-              <strong>{'next: '}</strong>
+              <strong>{'⏩'}</strong>{' '}
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title}
-              </Link>
+              </Link>{' '}
             </span>
           )}
         </div>
