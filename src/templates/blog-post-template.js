@@ -81,9 +81,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             value="Write a comment"
           />{' '}
         </div>
-        <div>
-          <WebmentionReplies target={'https://hbish.com' + post.fields.slug} />
-        </div>
+        <WebmentionReplies target={'https://hbish.com' + post.fields.slug} />
 
         <hr />
 

@@ -3,12 +3,14 @@ import React, { useEffect, useState, useReducer } from 'react'
 function Likes({ likes }) {
   const likeElements = likes.map(link => (
     <li key={link.id}>
-      <img
-        src={link.data.author.photo}
-        className={'liked-by'}
-        alt={link.data.author.name}
-      />
-      👏
+      <a href={link.data.url}>
+        <img
+          src={link.data.author.photo}
+          className={'liked-by'}
+          alt={link.data.author.name}
+        />
+        👏
+      </a>
     </li>
   ))
 
@@ -73,12 +75,12 @@ function WebmentionReplies({ target }) {
   }, [])
 
   return (
-    <>
+    <div>
       {fetchState === 'fetching' && <span>Fetching Replies...</span>}
       {(likes.length > 0 || replies.length > 0) && <h5>Recent Mentions</h5>}
       {likes.length > 0 && <Likes likes={likes} />}
       {replies.length > 0 && <Replies replies={replies} />}
-    </>
+    </div>
   )
 }
 
