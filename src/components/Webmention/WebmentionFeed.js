@@ -28,8 +28,8 @@ function Likes({ likes }) {
 function Replies({ replies }) {
   const replyElements = replies.map(link => (
     <li key={link.id}>
-      💬 <a href={link.data.url}>{link.data.author.name}</a> replied "
-      {link.data.content}"
+      💬 <a href={link.data.url}>{link.data.author.name}</a> replied:{' '}
+      <span dangerouslySetInnerHTML={{ __html: link.data.content }} />
     </li>
   ))
 
