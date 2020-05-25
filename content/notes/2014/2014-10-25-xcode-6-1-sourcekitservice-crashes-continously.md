@@ -1,6 +1,6 @@
 ---
 title: Xcode 6.1 SourceKitService Crashes Continously
-author: ben
+author: Ben Shi
 type: note
 date: 2014-10-25T23:31:09+00:00
 url: /xcode-6-1-sourcekitservice-crashes-continously/

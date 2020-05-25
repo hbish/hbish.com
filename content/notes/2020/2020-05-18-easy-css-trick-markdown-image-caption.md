@@ -1,6 +1,6 @@
 ---
 title: Easy CSS trick to have image captions on Markdown
-author: ben
+author: Ben Shi
 type: note
 date: 2020-05-18T19:10:00+00:00
 url: /easy-css-trick-image-caption-markdown/

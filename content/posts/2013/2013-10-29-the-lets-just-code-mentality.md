@@ -1,6 +1,6 @@
 ---
 title: The “Let’s just code” mentality
-author: ben
+author: Ben Shi
 type: post
 date: 2013-10-29T07:58:03+00:00
 url: /the-lets-just-code-mentality/

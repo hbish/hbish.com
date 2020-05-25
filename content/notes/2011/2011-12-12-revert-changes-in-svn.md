@@ -1,6 +1,6 @@
 ---
 title: Revert changes in SVN
-author: ben
+author: Ben Shi
 type: note
 date: 2011-12-12T07:22:17+00:00
 url: /revert-changes-in-svn/

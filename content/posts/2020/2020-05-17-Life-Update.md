@@ -1,6 +1,6 @@
 ---
 title: COVID Life Update
-author: ben
+author: Ben Shi
 type: post
 date: 2020-05-17T00:00:00+00:00
 url: /covid-life-update/

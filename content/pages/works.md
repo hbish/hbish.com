@@ -1,6 +1,6 @@
 ---
 title: Work
-author: ben
+author: Ben Shi
 type: page
 url: /work/
 ---

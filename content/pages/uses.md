@@ -1,6 +1,6 @@
 ---
 title: Uses
-author: ben
+author: Ben Shi
 type: page
 url: /uses/
 ---

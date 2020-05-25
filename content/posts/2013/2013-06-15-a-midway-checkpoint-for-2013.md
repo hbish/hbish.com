@@ -1,6 +1,6 @@
 ---
 title: A Midway Checkpoint for 2013
-author: ben
+author: Ben Shi
 type: post
 date: 2013-06-15T07:55:25+00:00
 url: /a-midway-checkpoint-for-2013/

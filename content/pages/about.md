@@ -1,6 +1,6 @@
 ---
 title: About
-author: ben
+author: Ben Shi
 type: page
 url: /about/
 ---

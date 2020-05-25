@@ -1,6 +1,6 @@
 ---
 title: Building high performance Java application (Lessons Learnt)
-author: ben
+author: Ben Shi
 type: post
 date: 2013-11-03T08:00:13+00:00
 url: /building-high-performance-java-application-lessons-learnt/

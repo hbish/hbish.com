@@ -1,6 +1,6 @@
 ---
 title: Decisions
-author: ben
+author: Ben Shi
 type: post
 date: 2013-06-12T07:53:33+00:00
 url: /decisions/

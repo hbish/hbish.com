@@ -1,6 +1,6 @@
 ﻿---
 title: Version 7 - GatsbyJS
-author: ben
+author: Ben Shi
 type: post
 date: 2018-10-15
 url: /version-7-gatsbyjs/
@@ -16,9 +16,9 @@ tags:
 I did a complete rewrite of my personal website in the last week. I abandoned CMSs all together and ventured down using a static site generator.
 
 ### Motivation
-In the very beginning, I had just a simple static HTML page with a little CSS. Then I started writing my own PHP to bring up dynamic content like pictures, tweets, and posts but it very quickly became unmanageable. Then came [WordPress](https://wordpress.org/), it has work well for me for the past for my technology blog site (now defunct), so I decided to use it on my own personal website. I have a love/hate relationship with WordPress, while there are loads of plugins and themes out there, there are very few that met all my needs.  So I often find myself tweaking themes, trying out new plugins and modify ones that don't quite meet my needs. 
+In the very beginning, I had just a simple static HTML page with a little CSS. Then I started writing my own PHP to bring up dynamic content like pictures, tweets, and posts but it very quickly became unmanageable. Then came [WordPress](https://wordpress.org/), it has work well for me for the past for my technology blog site (now defunct), so I decided to use it on my own personal website. I have a love/hate relationship with WordPress, while there are loads of plugins and themes out there, there are very few that met all my needs.  So I often find myself tweaking themes, trying out new plugins and modify ones that don't quite meet my needs.
 
-I did try a few other CMSs but I always find myself coming back to WordPress so I decided to self-host WordPress and wrote my own theme from scratch. I settled on simplicity for v6, only used plugins that I need ([Jetpack](https://wordpress.org/plugins/jetpack/) and [HyperCache](https://wordpress.org/plugins/hyper-cache/)) and kept the design minimal. That worked well for the past 3 years but something else was pulling me down .... WordPress. I needed a server, an application container in Nginx and every 3-4 months I had to upgrade WordPress for security patches. 
+I did try a few other CMSs but I always find myself coming back to WordPress so I decided to self-host WordPress and wrote my own theme from scratch. I settled on simplicity for v6, only used plugins that I need ([Jetpack](https://wordpress.org/plugins/jetpack/) and [HyperCache](https://wordpress.org/plugins/hyper-cache/)) and kept the design minimal. That worked well for the past 3 years but something else was pulling me down .... WordPress. I needed a server, an application container in Nginx and every 3-4 months I had to upgrade WordPress for security patches.
 
 ![Gatsby Development](./gatsby-development.png)
 
@@ -33,7 +33,7 @@ I have tried other solutions in the past...
 * [Kirby](https://getkirby.com/) is halfway between a static site generator and a CMS. The contents are managed in flat-files which is great but I didn't escape the horror that is maintaining a PHP server stack (that was on version 1 of Kirby, I haven't tried version 2 yet).
 * [Hugo](https://gohugo.io/) is another popular static site generator written in Go and it has a really big community built around it. It was able to compile my website really fast. However, it just didn't feel familiar enough for me especially trying to get my head around the templating language.
 
-Obviously, there are more static generators out there, it is not my intention to go through and compare them all, especially when I haven't used them in anger. 
+Obviously, there are more static generators out there, it is not my intention to go through and compare them all, especially when I haven't used them in anger.
 
 ### Conclusion
 I hope this post has helped you in deciding whether you need a static site generator. In the next post, I will go through in more detail how I moved from WordPress and the various problems I faced during the migration. And a subsequent post to go through my new blogging workflow.

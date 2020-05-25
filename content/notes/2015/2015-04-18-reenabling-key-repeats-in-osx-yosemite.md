@@ -1,6 +1,6 @@
 ---
 title: Reenabling Key Repeats in OSX Yosemite
-author: ben
+author: Ben Shi
 type: note
 date: 2015-04-18T09:30:20+00:00
 url: /reenabling-key-repeats-in-osx-yosemite/

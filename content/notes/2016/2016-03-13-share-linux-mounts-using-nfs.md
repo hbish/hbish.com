@@ -1,6 +1,6 @@
 ---
 title: Share linux folders using NFS
-author: ben
+author: Ben Shi
 type: note
 date: 2016-03-13T05:25:21+00:00
 url: /share-linux-mounts-using-nfs/

@@ -1,6 +1,6 @@
 ---
 title: Reversing a string without temp variables or library functions
-author: ben
+author: Ben Shi
 type: note
 date: 2012-08-23T07:44:24+00:00
 url: /reversing-a-string-without-temp-variables-or-library-functions/

@@ -1,6 +1,6 @@
 ---
 title: 'Choosing between Frameworks & Tools'
-author: ben
+author: Ben Shi
 type: post
 date: 2016-03-20T11:26:25+00:00
 url: /questions-ask-choosing-new-tools-frameworks-libraries/
