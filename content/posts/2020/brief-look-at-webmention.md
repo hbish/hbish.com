@@ -11,7 +11,7 @@ tags:
 ---
 
 I've been looking for the perfect commenting solution for my blog in the
-last few weeks. After trailing various solutions to no avail, I stumbled
+last few weeks. After trialing various solutions to no avail, I stumbled
 into the world of IndieWeb and in particular Webmention. This is a two
 part series, in the first I will go in to some details on what
 webmention is, how it works and what some benefits you may get over and
@@ -85,7 +85,7 @@ page after the page has loaded.
 The idea haas been around for some time check out the
 [W3C spec](https://www.w3.org/TR/webmention/), I personally have not
 heard of it until I eventually stumbled upon webmention from
-[swyyx](https://www.swyx.io/writing/clientside-webmentions/) and
+[swyx](https://www.swyx.io/writing/clientside-webmentions/) and
 subsequently
 [Max Bock](https://mxb.dev/blog/using-webmentions-on-static-sites/).
 Their implementations really grabbed my attention so I decided to dive
