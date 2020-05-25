@@ -160,8 +160,10 @@ figcaption {
   overflow: hidden;
   width: 10px;
   min-width: 10px;
-  height: 100vh;
-  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 
 @media (min-width: 200px) and (max-width: 640px) {

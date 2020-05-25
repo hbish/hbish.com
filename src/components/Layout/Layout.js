@@ -13,8 +13,8 @@ const Layout = ({ children, title, description, socialImage }) => {
 
   return (
     <div>
-      <div className={'waterfall float-left'} />
       <div className="container">
+        <div className={'waterfall float-left'} />
         <Helmet>
           <html lang="en" />
           <title>{title}</title>
