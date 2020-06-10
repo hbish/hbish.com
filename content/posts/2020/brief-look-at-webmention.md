@@ -3,7 +3,7 @@ title: A Brief Look at WebMention
 author: Ben Shi
 type: post
 date: 2020-05-25T00:00:00+00:00
-url: /brief-look-at-webmention
+url: /brief-look-at-webmention/
 tags:
   - programming
   - webmention

@@ -3,7 +3,7 @@ title: Deleting Old Tweets
 author: Ben Shi
 type: post
 date: 2020-06-07T00:00:00+00:00
-url: /deleting-old-tweets
+url: /deleting-old-tweets/
 tags:
   - programming
   - twitter
