@@ -23,6 +23,7 @@ const Layout = ({ children, title, description, socialImage }) => {
             href="https://webmention.io/hbish.com/webmention"
           />
           <link rel="pingback" href="https://webmention.io/hbish.com/xmlrpc" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content={description} />
           <meta property="og:site_name" content={title} />
           <meta property="og:image" content={metaImageUrl} />

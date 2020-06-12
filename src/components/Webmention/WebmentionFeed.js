@@ -66,8 +66,12 @@ function WebmentionReplies({ target }) {
   // Load initial comments once
   useEffect(() => {
     getMentions().then(feed => {
-      const likeFeed = feed.filter(item => item.activity.type === 'like')
-      const replyFeed = feed.filter(item => item.activity.type !== 'like')
+      const likeFeed = feed.filter(
+        item => ['like', 'repost'].indexOf(item.activity.type) > 0
+      )
+      const replyFeed = feed.filter(
+        item => ['like', 'repost'].indexOf(item.activity.type) < 0
+      )
       setLikes(likeFeed)
       setReplies(replyFeed)
       setFetchState('done')
