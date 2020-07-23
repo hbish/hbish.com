@@ -50,12 +50,14 @@ const Sidebar = ({ data }) => {
         />
         <hr />
         <a href="https://hbish.com/" className={'p-name u-url'}>
-          <strong>Ben Shi</strong>
+          <h1>
+            <small>Ben Shi</small>
+          </h1>
         </a>
-        <p className={'p-note'}>
+        <p className={'p-note text-center'}>
           👋 I'm a software engineer from Sydney, Australia. I love solving
-          complex issues through purposeful software. I also enjoy a good burger
-          and g&t.
+          complex problems. I write about software development, agile practices
+          and personal development & learning.
         </p>
         <nav>
           <ul>
@@ -104,7 +106,7 @@ const Sidebar = ({ data }) => {
           </a>
         </div>
       </div>
-      <div>
+      <div className={'theme-switcher'}>
         <label htmlFor={'themeId'}>
           theme
           <br />

@@ -91,7 +91,7 @@ body.gruv-dark {
   max-width: 112rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 5rem 4rem 0 4rem;
+  padding: 5rem 2rem 0 2rem;
 }
 
 body, input {
@@ -162,6 +162,14 @@ figcaption {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .waterfall {
   background-image: linear-gradient(to bottom, var(--color-primary) 0%, transparent 100%);
   overflow: hidden;
@@ -180,6 +188,14 @@ figcaption {
 
   .content {
     padding: 0 0;
+
+    h3 {
+      margin-top: 3rem;
+    }
+
+    .summary, .time-to-read {
+      display: none;
+    }
   }
 
   .sidebar {
@@ -187,8 +203,21 @@ figcaption {
     width: 80%;
     margin: 0 auto;
 
+    h1 {
+      font-size: 3.6rem;
+    }
+
     .avatar {
-      max-width: 16rem;
+      max-width: 8rem;
+    }
+
+    .p-note, .theme-switcher, hr {
+      display: none;
+    }
+
+    .social {
+      width: auto;
+      padding-bottom: 5rem;
     }
 
     nav {
@@ -206,6 +235,7 @@ figcaption {
   }
 
   footer {
-    margin-bottom: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 7rem;
   }
 }

@@ -3,6 +3,7 @@ title: Talks
 author: Ben Shi
 type: page
 url: /talks/
+description: Ben Shi's previous talks
 ---
 
 #### 2019 Sep: DDDSydney

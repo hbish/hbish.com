@@ -3,6 +3,7 @@ title: Versions
 author: Ben Shi
 type: page
 url: /versions/
+description: The history and evolution of hbish.com
 ---
 
 I've been maintaining [hbish.com](https://hbish.com/) since 2009. It has gone through several iterations ever since

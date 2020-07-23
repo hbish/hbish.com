@@ -52,11 +52,22 @@ class BlogIndex extends React.Component {
               return (
                 <div key={node.fields.slug}>
                   {index === 0 && <h3>{year}</h3>}
+                  <div className={'row'}>
+                    <div className={'column'}>
+                      <Link to={node.fields.slug}>{title}</Link> ::{' '}
+                      <strong>{node.frontmatter.date}</strong>
+                    </div>
+                    <div className={'column column-20 text-right'}>
+                      <span className={'time-to-read'}>
+                        ~{node.timeToRead} min read
+                      </span>
+                    </div>
+                  </div>
                   <div>
-                    <strong>{node.frontmatter.date}</strong> ::{' '}
-                    <Link to={node.fields.slug}>{title}</Link> ::{' '}
-                    {node.timeToRead} min read
-                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                    <p
+                      className={'summary text-justify'}
+                      dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                    />
                   </div>
                 </div>
               )

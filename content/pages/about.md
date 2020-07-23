@@ -3,17 +3,16 @@ title: About
 author: Ben Shi
 type: page
 url: /about/
+description: Find out more about who Ben Shi is and what he is up to
 ---
 
 I'm currently the Head of Engineering at
-[GROW](https://www.growsuper.com/), where we aim to disrupt the
-superannuation administration industry by providing administrators with
-better user experience and access to more member data through the use of
-distributed ledger technology and APIs.
+[GROW](https://www.growsuper.com/), where we aim to disrupt the superannuation administration industry by providing administrators with better user
+experience and access to more member data through the use of distributed ledger technology and APIs.
 
 I previously worked for
 [Versent](https://versent.com.au),
-[J.P Morgan](https://www.jpmorgan.com/pages /jpmorgan),
+[J.P Morgan](https://www.jpmorgan.com/pages/jpmorgan),
 [ACI Worldwide](https://www.aciworldwide.com/), and
 [Distra](https://www.crunchbase.com/company/distra).
 
@@ -31,8 +30,7 @@ I previously worked for
 
 #### Links of interest
 
-[/work](/work) - a bunch of my previous work both personal and
-professional
+[/work](/work) - a bunch of my previous work both personal and professional
 
 [/talks](/talks) - some (just one) of my talks
 

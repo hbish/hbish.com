@@ -9,12 +9,11 @@ import { Helmet } from 'react-helmet/es/Helmet'
 const PageTemplate = ({ data }) => {
   const { title: siteTitle } = useSiteMetadata()
   const { html: pageBody, frontmatter, fields } = data.markdownRemark
-  const siteDescription = pageBody.excerpt
 
   return (
     <Layout
       title={`${frontmatter.title} | ${siteTitle}`}
-      description={siteDescription}
+      description={frontmatter.description}
     >
       <Helmet>
         <script type="application/ld+json">
@@ -23,7 +22,7 @@ const PageTemplate = ({ data }) => {
             "@type": "WebPage",
             "name": "${frontmatter.title} | ${siteTitle}",
             "url": "${'https://hbish.com' + fields.slug}",
-            "description": "${siteDescription}"
+            "description": "${frontmatter.description}"
           }`}
         </script>
       </Helmet>
@@ -93,6 +92,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         categories
         tags
+        description
       }
     }
   }

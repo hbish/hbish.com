@@ -3,6 +3,7 @@ title: Work
 author: Ben Shi
 type: page
 url: /work/
+description: Some of Ben Shi's work. Both professional and personal.
 ---
 
 - [Personal Work](#personal-work)

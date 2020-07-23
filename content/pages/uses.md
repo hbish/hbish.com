@@ -3,6 +3,7 @@ title: Uses
 author: Ben Shi
 type: page
 url: /uses/
+description: What tools and gears Ben Shi uses for development and programming
 ---
 
 This page is inspired by WesBos’ [uses.tech](https://uses.tech).

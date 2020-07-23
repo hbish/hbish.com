@@ -3,7 +3,7 @@ title: Modding the Keychron K2 Mechanical Keyboard
 author: Ben Shi
 type: post
 date: 2020-07-15
-url: /modding-keychron-k2
+url: /modding-keychron-k2/
 tags:
   - modding
   - mechanical keyboard

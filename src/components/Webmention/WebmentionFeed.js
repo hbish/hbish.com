@@ -67,7 +67,7 @@ function WebmentionReplies({ target }) {
   useEffect(() => {
     getMentions().then(feed => {
       const likeFeed = feed.filter(
-        item => ['like', 'repost'].indexOf(item.activity.type) > 0
+        item => ['like', 'repost'].indexOf(item.activity.type) >= 0
       )
       const replyFeed = feed.filter(
         item => ['like', 'repost'].indexOf(item.activity.type) < 0
