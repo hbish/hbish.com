@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
 import WebmentionReplies from '../components/Webmention/WebmentionFeed'
 import WebmentionCount from '../components/Webmention/WebmentionCount'
+import { Helmet } from 'react-helmet/es/Helmet'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const { title: siteTitle } = useSiteMetadata()
@@ -23,6 +24,17 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       title={`${post.frontmatter.title} | ${siteTitle}`}
       description={post.excerpt}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {`{
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "name": "${post.frontmatter.title} | ${siteTitle}",
+            "url": "${'https://hbish.com' + post.fields.slug}",
+            "description": "${post.excerpt}"
+          }`}
+        </script>
+      </Helmet>
       <div className={'content'}>
         <div className={'section-title'}>Blog Post</div>
         <article className={'h-entry'}>

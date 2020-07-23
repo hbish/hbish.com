@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
 import WebmentionReplies from '../components/Webmention/WebmentionFeed'
+import { Helmet } from 'react-helmet/es/Helmet'
 
 const PageTemplate = ({ data }) => {
   const { title: siteTitle } = useSiteMetadata()
@@ -15,6 +16,17 @@ const PageTemplate = ({ data }) => {
       title={`${frontmatter.title} | ${siteTitle}`}
       description={siteDescription}
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {`{
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "name": "${frontmatter.title} | ${siteTitle}",
+            "url": "${'https://hbish.com' + fields.slug}",
+            "description": "${siteDescription}"
+          }`}
+        </script>
+      </Helmet>
       <div className={'content'}>
         <div className={'section-title'}>{frontmatter.title}</div>
         <article dangerouslySetInnerHTML={{ __html: pageBody }} />

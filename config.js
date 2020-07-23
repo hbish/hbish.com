@@ -2,8 +2,9 @@
 
 module.exports = {
   url: 'https://hbish.com',
-  title: 'Ben Shi',
-  description: 'Personal Website of Ben Shi',
+  title: 'hbish.com - Ben Shi',
+  description:
+    'Ben Shi - an engineering leader and pragmatic thinker, love solving complex issues through purposeful software',
   author: {
     name: 'Ben Shi',
     photo: '/media/profile-pic.png',

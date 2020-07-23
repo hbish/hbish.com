@@ -7,11 +7,7 @@ import Layout from '../components/Layout'
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
+    const siteMetadata = get(this, 'props.data.site.siteMetadata')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
     const years = new Map()
     posts.forEach(({ node }) => {
@@ -26,12 +22,28 @@ class BlogIndex extends React.Component {
     })
 
     return (
-      <Layout title={siteTitle} description={siteDescription}>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
-        />
+      <Layout title={siteMetadata.title} description={siteMetadata.description}>
+        <Helmet>
+          <script type="application/ld+json">
+            {`{
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "${siteMetadata.title}",
+            "url": "${siteMetadata.siteUrl}",
+            "description": "${siteMetadata.description}"
+          }`}
+          </script>
+
+          <script type="application/ld+json">
+            {`{
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "name": "${siteMetadata.title}",
+            "url": "${siteMetadata.siteUrl}",
+            "description": "${siteMetadata.description}"
+          }`}
+          </script>
+        </Helmet>
         <div className={'content'}>
           <div className={'section-title'}>Posts</div>
           {Array.from(years).map(([year, nodes]) => {
@@ -65,6 +77,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        siteUrl
       }
     }
     allMarkdownRemark(
