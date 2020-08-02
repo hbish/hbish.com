@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/hbish
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://hbish.com
+  * I am hbish (https://keybase.io/hbish) on keybase.
+  * I have a public key with fingerprint 7B17 DB3B 6811 AA54 7FB4  0734 732C 4049 474B 6C4E
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010164d1dbb5b2a90be15e795cbe826bf2a8dd9336181cc1c55a1f773fdf12a6ecdd0a",
+      "fingerprint": "7b17db3b6811aa547fb40734732c4049474b6c4e",
+      "host": "keybase.io",
+      "key_id": "732c4049474b6c4e",
+      "kid": "010164d1dbb5b2a90be15e795cbe826bf2a8dd9336181cc1c55a1f773fdf12a6ecdd0a",
+      "uid": "d98d3b4398ca1803f4104b01c940e419",
+      "username": "hbish"
+    },
+    "service": {
+      "hostname": "hbish.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1596382335,
+  "expire_in": 157680000,
+  "prev": "9c886d50a118dd5bc9f76bda36ed50af2d31aa2820f7777e429a66f9ee35a197",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMIiAnicrVJbSFRBGF4tLY0otsIeJPB4SWmzM2fOdZOgEqVUgkxCkJaZM3Pck7pn
+3bNaZlaQFBsE+RJIoEaUlUplmFtG2pUudJFMogJFCvKCWEFBF2qOFPTQY/MyzDff
+9833//PfWTjHlRizybVwpnTHj+aYRzebaly+jDf76zlskTrOW89V0NmNVhJqh30V
+JuG8HA94IIsEEIwlLCCNxxRIVNEkHVNVkLEhIJUQDUIZqEDXgS5JCBiKAg1iAAHJ
+VCeER5yHM8xAOQ0FQ2YgzGwVDBSCIZZVABCSRMXAIq9AUYGCLvKiJioilnWRMqHf
+sh0FC4eRTbNNi2Hs4JuN9w/+f85dM2tHNJVALEJN1RFQeWiIgBcxD3RN5KkINIdo
+01AAVVHG9mPT9nMNHo5BtaZOna46Zfx9na1bVUwVDFlhS7cqHTgcDtpeRxauCzq8
+XRT7fjv4sBkgrINMUUtDtmkFOC9gTD1sOpZA0mSoChBKHo7uDpoh6jMdhqTIKs+W
+8w6tZZaarqoykXgEACtfwrpmKDImCMrUQQ2BQPYfgirwrBeKQkVBQ7JsaJRC1h9N
+4ZyaqgMW51VZTFTOLG2zPIDCNSHKNdwaKJvrikl0xcfFOpPlSkxY/GfeYo15P0u7
+Qk/23pVR4Xj/RGr6j89JndNL255379s61ft15LGYntB2ffT74LoHrfnvHhZts8+l
+9AxN9ncsutQ0aRZ8OO7u7Fvj7VZye7bA5Ehbc0XOhoG19xsEd9yFx8sT7pVlfwwm
+5+/MdHNZ6PwROBitSz/SunpgqneineYMfxudQb40wWN6n1ZnLomO9h0qnl89FanM
+iib1FxQWxm88U9x4I/ft9ZXysxWHf5a8nh7KG/u8/mzzeMQOvhw68GrPl9NXPrXk
+bN4IcGN75GpR3sGcBzWe/GhpSsex277hVOHayIKSVZz/rgG7xlq0k9sXlF3OSFvW
+vb//RF4KfyrJPfL+4tEXvwBd+EB1
+=ZrzD
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hbish
+
+==================================================================

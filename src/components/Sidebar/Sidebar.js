@@ -5,6 +5,7 @@ import IcEmail from '../../assets/svg/mail.inline.svg'
 import IcTwitter from '../../assets/svg/twitter.inline.svg'
 import IcLinkedin from '../../assets/svg/linkedin.inline.svg'
 import IcGithub from '../../assets/svg/github.inline.svg'
+import IcKeybase from '../../assets/svg/keybase.inline.svg'
 
 const Sidebar = ({ data }) => {
   let websiteTheme
@@ -79,6 +80,23 @@ const Sidebar = ({ data }) => {
           </ul>
         </nav>
         <div className={'social'}>
+          <a href="https://twitter.com/hbish" title={'tweet ben'} rel={'me'}>
+            <IcTwitter aria-labelledby={'title'} />
+          </a>
+          <a
+            href="https://au.linkedin.com/in/benshi"
+            title={'connect with ben on linkedin'}
+            rel={'me'}
+          >
+            <IcLinkedin aria-labelledby={'title'} />
+          </a>
+          <a
+            href="https://github.com/hbish"
+            title={'follow ben on github'}
+            rel={'me'}
+          >
+            <IcGithub aria-labelledby={'title'} />
+          </a>
           <a
             href="mailto:ben@hbish.com"
             title={'email ben'}
@@ -86,23 +104,13 @@ const Sidebar = ({ data }) => {
             className={'u-email'}
           >
             <IcEmail aria-labelledby={'title'} />
-          </a>{' '}
-          <a href="https://twitter.com/hbish" title={'tweet ben'} rel={'me'}>
-            <IcTwitter aria-labelledby={'title'} />
-          </a>{' '}
+          </a>
           <a
-            href="https://au.linkedin.com/in/benshi"
-            title={'connect with ben on linkedin'}
+            href="https://keybase.io/hbish"
+            title={'auth me on keybase'}
             rel={'me'}
           >
-            <IcLinkedin aria-labelledby={'title'} />
-          </a>{' '}
-          <a
-            href="https://github.com/hbish"
-            title={'follow ben on github'}
-            rel={'me'}
-          >
-            <IcGithub aria-labelledby={'title'} />
+            <IcKeybase aria-labelledby={'title'} />
           </a>
         </div>
       </div>
