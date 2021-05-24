@@ -18,7 +18,7 @@ This page is inspired by WesBos’ [uses.tech](https://uses.tech).
 
 ### Gadgets
 
-- **Phone** - Google Pixel 2 XL
+- **Phone** - Xiaomi Poco F2 Pro
 - **Tablet** - Apple iPad Air 2
 - **Headphone** - [Bose QuietComfort 35 II](https://www.bose.com.au/en_au/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html#v=qc35_ii_black) - over-ear, mostly for work & air travel
 - **Earbuds** - [EOZ Air](https://eozaudio.com/products/eoz-air) - in-ear, mostly for daily commute

@@ -57,13 +57,19 @@ const Sidebar = ({ data }) => {
         </a>
         <p className={'p-note text-center'}>
           👋 I'm a software engineer from Sydney, Australia. I love solving
-          complex problems. I write about software development, agile practices
-          and personal development & learning.
+          complex problems.
+        </p>
+        <p className={'p-note text-center'}>
+          I write about software engineering, agile practices and self
+          development & learning.
         </p>
         <nav>
           <ul>
             <li>
               <Link to="/about/">/about</Link>
+            </li>
+            <li>
+              <Link to="/now/">/now</Link>
             </li>
             <li>
               <Link to="/work/">/work</Link>
