@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { graphql, Link, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import IcEmail from '../../assets/svg/mail.inline.svg'
 import IcTwitter from '../../assets/svg/twitter.inline.svg'
 import IcLinkedin from '../../assets/svg/linkedin.inline.svg'
@@ -28,20 +28,18 @@ const Sidebar = ({ data }) => {
       <div className={'h-card'}>
         <StaticQuery
           query={graphql`
-            query {
+            {
               profilePic: file(relativePath: { eq: "profile-pic.png" }) {
                 childImageSharp {
-                  fluid(maxWidth: 200) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(width: 200, layout: CONSTRAINED)
                 }
               }
             }
           `}
-          render={data => (
+          render={(data) => (
             <Link to={'/'}>
-              <Img
-                fluid={data['profilePic'].childImageSharp.fluid}
+              <GatsbyImage
+                image={data['profilePic'].childImageSharp.gatsbyImageData}
                 alt={`Ben Shi`}
                 className={'avatar'}
                 placeholderClassName={'u-photo'}
@@ -127,7 +125,7 @@ const Sidebar = ({ data }) => {
           <select
             id="themeId"
             value={theme}
-            onChange={e => window.__setPreferredTheme(e.target.value)}
+            onChange={(e) => window.__setPreferredTheme(e.target.value)}
           >
             <option value="light">light</option>
             <option value="dark">dark</option>
