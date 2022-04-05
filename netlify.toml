@@ -3,3 +3,4 @@
   publish = "public"
 [build.environment]
   NODE_VERSION = "14.19.1"
+  NODE_OPTIONS = "--max-old-space-size=4096"
