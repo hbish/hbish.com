@@ -44,15 +44,15 @@ I've went through multiple iterations of the website as my personal design philo
 
 ### Professional Work
 
-Below are some of my professional projects/work that I have been involved in, which are available in the public. Some
- projects are left out due to NDAs and other restrictions.
+Below are some of my professional projects/work that I have been involved in, which are available in the public. I omitted some
+ projects due to NDAs and other restrictions.
 
-<details><summary>TINA - GROW Super</summary>
+<details><summary>DLTA - GROW Inc.</summary>
 
 A superannuation administration platform designed from the ground up built on top of distributed ledger technology
  (Corda) ([find out more](https://www.financialstandard.com.au/news/grow-super-signs-first-admin-client-153801514)).
 
-**Technology** - Kotlin, Corda, Spring Boot, VueJs, Node.Js, Postgres, RPC, Rest API, AWS
+**Technology** - Kotlin, R3 Corda, Spring Boot, VueJs, Node.Js, Postgres, RPC, Rest API, AWS
 
 </details>
 
