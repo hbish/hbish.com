@@ -10,15 +10,15 @@ This page is inspired by Derek Sivers’ [nownownow](https://nownownow.com/) and
 
 ### What I'm focused on now
 
-- helping reshape superannuation with [GROW](https://grow.inc/)
-- organising [Voxxdays Downunder](https://australia.voxxeddays.com/)
+- helping reshape superannuation with [GROW Inc.](https://grow.inc/)
+- organising [Programmable](https://programmable.io/)
 - growing my own indoor jungle
+- learning about horticulture and agriculture
 
-### What I plan on achieving this year
+### What I plan on achieving in 2023
 
 - read 6 books
 - learn more about go programming
-- meditate at least twice a week
 - blog more...
 
-_last updated: May 2021_
+_last updated: Jan 2023_
